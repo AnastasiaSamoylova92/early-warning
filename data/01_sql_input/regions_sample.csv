@@ -1,0 +1,11 @@
+region_id,country,region,currency,fx_to_eur,market_growth_factor,margin_factor
+9,Poland,Eastern Europe,PLN,0.23,1.12,0.89
+2,France,Western Europe,EUR,1.0,1.02,0.97
+6,United States,North America,USD,0.92,1.14,1.03
+1,Germany,DACH,EUR,1.0,1.06,0.98
+8,Netherlands,Benelux,EUR,1.0,1.07,1.0
+3,Spain,Southern Europe,EUR,1.0,1.09,0.94
+10,Japan,APAC,JPY,0.0062,0.95,1.02
+5,United Kingdom,Northern Europe,GBP,1.17,0.97,1.01
+4,Italy,Southern Europe,EUR,1.0,1.01,0.93
+7,Canada,North America,CAD,0.68,1.04,0.99

@@ -1,0 +1,101 @@
+product_id,sku,product_family,product_group,product_name,launch_year,lifecycle_stage,base_list_price_eur,base_unit_cost_eur,target_margin_pct,product_growth_factor,is_declining_product,is_new_product,launch_date
+1095,SKU-1095,Medical Devices,Monitoring Device,Monitoring Device Model 16,2022,Mature,551.56,292.21,0.39,1.1,0,0,2022-01-01
+1015,SKU-1015,IT Devices,Laptop Pro,Laptop Pro Model 16,2022,Mature,900.44,631.98,0.29,1.08,0,0,2022-01-01
+1030,SKU-1030,IT Devices,Laptop Standard,Laptop Standard Model 11,2021,Growth,638.04,477.89,0.24,1.01,0,0,2021-01-01
+1158,SKU-1158,Legacy Products,Legacy Workstation,Legacy Workstation Model 19,2019,Decline,801.76,670.96,0.18,0.88,1,0,2019-01-01
+1128,SKU-1128,Components,Connectivity Module,Connectivity Module Model 09,2024,Growth,52.9,37.94,0.31,1.18,0,0,2024-01-01
+1115,SKU-1115,Industrial Tech,Industrial Scanner,Industrial Scanner Model 16,2020,Growth,1466.19,955.94,0.34,1.03,0,0,2020-01-01
+1069,SKU-1069,Medical Devices,Medical Sensor,Medical Sensor Model 10,2021,Mature,191.46,112.61,0.45,1.15,0,0,2021-01-01
+1170,SKU-1170,Accessories,Accessory Kit,Accessory Kit Model 11,2024,Mature,69.9,56.13,0.22,1.05,0,0,2024-01-01
+1174,SKU-1174,Accessories,Accessory Kit,Accessory Kit Model 15,2022,Growth,54.5,39.65,0.22,1.05,0,0,2022-01-01
+1045,SKU-1045,IT Devices,Tablet Enterprise,Tablet Enterprise Model 06,2021,Mature,424.65,318.72,0.27,1.12,0,0,2021-01-01
+1066,SKU-1066,Medical Devices,Medical Sensor,Medical Sensor Model 07,2022,Growth,164.7,86.7,0.45,1.15,0,0,2022-01-01
+1182,SKU-1182,Services,Service Contract,Service Contract Model 03,2018,New,246.15,83.96,0.62,1.16,0,1,2018-01-01
+1165,SKU-1165,Accessories,Accessory Kit,Accessory Kit Model 06,2020,Decline,62.36,47.79,0.22,1.05,1,0,2020-01-01
+1078,SKU-1078,Medical Devices,Medical Sensor,Medical Sensor Model 19,2021,New,237.49,116.64,0.45,1.15,0,1,2021-01-01
+1186,SKU-1186,Services,Service Contract,Service Contract Model 07,2022,Growth,228.78,98.55,0.62,1.16,0,0,2022-01-01
+1177,SKU-1177,Accessories,Accessory Kit,Accessory Kit Model 18,2021,Mature,45.28,38.86,0.22,1.05,0,0,2021-01-01
+1056,SKU-1056,IT Devices,Tablet Enterprise,Tablet Enterprise Model 17,2022,Growth,425.25,256.9,0.27,1.12,0,0,2022-01-01
+1152,SKU-1152,Legacy Products,Legacy Workstation,Legacy Workstation Model 13,2023,Decline,837.74,720.73,0.18,0.88,1,0,2023-01-01
+1082,SKU-1082,Medical Devices,Monitoring Device,Monitoring Device Model 03,2019,Mature,854.27,588.25,0.39,1.1,0,0,2019-01-01
+1068,SKU-1068,Medical Devices,Medical Sensor,Medical Sensor Model 09,2020,Decline,189.35,105.06,0.45,1.15,1,0,2020-01-01
+1124,SKU-1124,Components,Connectivity Module,Connectivity Module Model 05,2023,Mature,93.75,61.57,0.31,1.18,0,0,2023-01-01
+1016,SKU-1016,IT Devices,Laptop Pro,Laptop Pro Model 17,2021,Mature,1078.58,784.6,0.29,1.08,0,0,2021-01-01
+1148,SKU-1148,Legacy Products,Legacy Workstation,Legacy Workstation Model 09,2023,Decline,598.85,529.42,0.18,0.88,1,0,2023-01-01
+1093,SKU-1093,Medical Devices,Monitoring Device,Monitoring Device Model 14,2024,Decline,869.94,530.16,0.39,1.1,1,0,2024-01-01
+1065,SKU-1065,Medical Devices,Medical Sensor,Medical Sensor Model 06,2018,Growth,144.46,81.17,0.45,1.15,0,0,2018-01-01
+1060,SKU-1060,Medical Devices,Medical Sensor,Medical Sensor Model 01,2022,Mature,165.38,98.21,0.45,1.15,0,0,2022-01-01
+1084,SKU-1084,Medical Devices,Monitoring Device,Monitoring Device Model 05,2022,Decline,646.21,393.13,0.39,1.1,1,0,2022-01-01
+1067,SKU-1067,Medical Devices,Medical Sensor,Medical Sensor Model 08,2023,Mature,190.42,104.23,0.45,1.15,0,0,2023-01-01
+1125,SKU-1125,Components,Connectivity Module,Connectivity Module Model 06,2019,Growth,81.19,54.18,0.31,1.18,0,0,2019-01-01
+1132,SKU-1132,Components,Connectivity Module,Connectivity Module Model 13,2024,New,72.78,53.45,0.31,1.18,0,1,2024-01-01
+1009,SKU-1009,IT Devices,Laptop Pro,Laptop Pro Model 10,2022,Growth,830.51,623.9,0.29,1.08,0,0,2022-01-01
+1018,SKU-1018,IT Devices,Laptop Pro,Laptop Pro Model 19,2022,Growth,1028.66,723.02,0.29,1.08,0,0,2022-01-01
+1055,SKU-1055,IT Devices,Tablet Enterprise,Tablet Enterprise Model 16,2019,Growth,426.22,307.38,0.27,1.12,0,0,2019-01-01
+1075,SKU-1075,Medical Devices,Medical Sensor,Medical Sensor Model 16,2021,Growth,169.6,108.18,0.45,1.15,0,0,2021-01-01
+1150,SKU-1150,Legacy Products,Legacy Workstation,Legacy Workstation Model 11,2024,Mature,705.48,600.95,0.18,0.88,0,0,2024-01-01
+1104,SKU-1104,Industrial Tech,Industrial Scanner,Industrial Scanner Model 05,2023,Growth,998.19,692.65,0.34,1.03,0,0,2023-01-01
+1135,SKU-1135,Components,Connectivity Module,Connectivity Module Model 16,2020,Growth,79.11,52.8,0.31,1.18,0,0,2020-01-01
+1137,SKU-1137,Components,Connectivity Module,Connectivity Module Model 18,2022,Growth,64.9,47.46,0.31,1.18,0,0,2022-01-01
+1164,SKU-1164,Accessories,Accessory Kit,Accessory Kit Model 05,2021,Growth,42.47,32.1,0.22,1.05,0,0,2021-01-01
+1076,SKU-1076,Medical Devices,Medical Sensor,Medical Sensor Model 17,2020,Growth,140.83,71.37,0.45,1.15,0,0,2020-01-01
+1079,SKU-1079,Medical Devices,Medical Sensor,Medical Sensor Model 20,2021,Decline,193.1,98.21,0.45,1.15,1,0,2021-01-01
+1197,SKU-1197,Services,Service Contract,Service Contract Model 18,2020,Decline,235.33,77.71,0.62,1.16,1,0,2020-01-01
+1038,SKU-1038,IT Devices,Laptop Standard,Laptop Standard Model 19,2022,Growth,573.59,437.47,0.24,1.01,0,0,2022-01-01
+1024,SKU-1024,IT Devices,Laptop Standard,Laptop Standard Model 05,2022,Growth,528.56,391.14,0.24,1.01,0,0,2022-01-01
+1122,SKU-1122,Components,Connectivity Module,Connectivity Module Model 03,2021,Decline,86.25,57.01,0.31,1.18,1,0,2021-01-01
+1195,SKU-1195,Services,Service Contract,Service Contract Model 16,2020,Decline,232.33,100.86,0.62,1.16,1,0,2020-01-01
+1029,SKU-1029,IT Devices,Laptop Standard,Laptop Standard Model 10,2022,Mature,622.17,423.02,0.24,1.01,0,0,2022-01-01
+1019,SKU-1019,IT Devices,Laptop Pro,Laptop Pro Model 20,2021,Mature,974.41,661.35,0.29,1.08,0,0,2021-01-01
+1143,SKU-1143,Legacy Products,Legacy Workstation,Legacy Workstation Model 04,2022,Decline,851.54,690.26,0.18,0.88,1,0,2022-01-01
+1086,SKU-1086,Medical Devices,Monitoring Device,Monitoring Device Model 07,2023,Mature,797.93,483.86,0.39,1.1,0,0,2023-01-01
+1114,SKU-1114,Industrial Tech,Industrial Scanner,Industrial Scanner Model 15,2021,Growth,1419.89,912.37,0.34,1.03,0,0,2021-01-01
+1173,SKU-1173,Accessories,Accessory Kit,Accessory Kit Model 14,2018,Mature,53.26,38.58,0.22,1.05,0,0,2018-01-01
+1005,SKU-1005,IT Devices,Laptop Pro,Laptop Pro Model 06,2023,Decline,851.94,552.8,0.29,1.08,1,0,2023-01-01
+1126,SKU-1126,Components,Connectivity Module,Connectivity Module Model 07,2023,Mature,63.41,44.82,0.31,1.18,0,0,2023-01-01
+1117,SKU-1117,Industrial Tech,Industrial Scanner,Industrial Scanner Model 18,2020,Mature,1124.38,858.63,0.34,1.03,0,0,2020-01-01
+1073,SKU-1073,Medical Devices,Medical Sensor,Medical Sensor Model 14,2021,Decline,177.04,99.6,0.45,1.15,1,0,2021-01-01
+1140,SKU-1140,Legacy Products,Legacy Workstation,Legacy Workstation Model 01,2024,Decline,1080.2,890.47,0.18,0.88,1,0,2024-01-01
+1098,SKU-1098,Medical Devices,Monitoring Device,Monitoring Device Model 19,2023,Decline,606.24,439.83,0.39,1.1,1,0,2023-01-01
+1172,SKU-1172,Accessories,Accessory Kit,Accessory Kit Model 13,2018,Growth,48.53,43.48,0.22,1.05,0,0,2018-01-01
+1096,SKU-1096,Medical Devices,Monitoring Device,Monitoring Device Model 17,2020,Growth,937.15,646.74,0.39,1.1,0,0,2020-01-01
+1169,SKU-1169,Accessories,Accessory Kit,Accessory Kit Model 10,2020,Decline,50.76,40.7,0.22,1.05,1,0,2020-01-01
+1097,SKU-1097,Medical Devices,Monitoring Device,Monitoring Device Model 18,2024,Mature,669.32,393.57,0.39,1.1,0,0,2024-01-01
+1031,SKU-1031,IT Devices,Laptop Standard,Laptop Standard Model 12,2022,Mature,656.43,450.86,0.24,1.01,0,0,2022-01-01
+1012,SKU-1012,IT Devices,Laptop Pro,Laptop Pro Model 13,2022,Growth,960.33,667.95,0.29,1.08,0,0,2022-01-01
+1035,SKU-1035,IT Devices,Laptop Standard,Laptop Standard Model 16,2020,New,529.21,458.62,0.24,1.01,0,1,2020-01-01
+1119,SKU-1119,Industrial Tech,Industrial Scanner,Industrial Scanner Model 20,2022,Mature,1532.95,1042.95,0.34,1.03,0,0,2022-01-01
+1042,SKU-1042,IT Devices,Tablet Enterprise,Tablet Enterprise Model 03,2019,Mature,407.33,310.69,0.27,1.12,0,0,2019-01-01
+1189,SKU-1189,Services,Service Contract,Service Contract Model 10,2021,Mature,265.75,96.46,0.62,1.16,0,0,2021-01-01
+1090,SKU-1090,Medical Devices,Monitoring Device,Monitoring Device Model 11,2020,Decline,793.6,518.35,0.39,1.1,1,0,2020-01-01
+1136,SKU-1136,Components,Connectivity Module,Connectivity Module Model 17,2021,Mature,77.98,49.33,0.31,1.18,0,0,2021-01-01
+1051,SKU-1051,IT Devices,Tablet Enterprise,Tablet Enterprise Model 12,2022,Growth,406.82,314.13,0.27,1.12,0,0,2022-01-01
+1127,SKU-1127,Components,Connectivity Module,Connectivity Module Model 08,2022,Decline,105.73,68.22,0.31,1.18,1,0,2022-01-01
+1162,SKU-1162,Accessories,Accessory Kit,Accessory Kit Model 03,2024,Mature,66.78,53.17,0.22,1.05,0,0,2024-01-01
+1041,SKU-1041,IT Devices,Tablet Enterprise,Tablet Enterprise Model 02,2020,Decline,354.85,242.51,0.27,1.12,1,0,2020-01-01
+1118,SKU-1118,Industrial Tech,Industrial Scanner,Industrial Scanner Model 19,2020,Growth,1383.55,779.13,0.34,1.03,0,0,2020-01-01
+1113,SKU-1113,Industrial Tech,Industrial Scanner,Industrial Scanner Model 14,2024,Mature,1719.99,1163.7,0.34,1.03,0,0,2024-01-01
+1026,SKU-1026,IT Devices,Laptop Standard,Laptop Standard Model 07,2024,Mature,599.95,484.46,0.24,1.01,0,0,2024-01-01
+1139,SKU-1139,Components,Connectivity Module,Connectivity Module Model 20,2023,Mature,95.18,62.52,0.31,1.18,0,0,2023-01-01
+1100,SKU-1100,Industrial Tech,Industrial Scanner,Industrial Scanner Model 01,2023,Mature,1482.43,922.06,0.34,1.03,0,0,2023-01-01
+1111,SKU-1111,Industrial Tech,Industrial Scanner,Industrial Scanner Model 12,2022,New,1305.88,833.94,0.34,1.03,0,1,2022-01-01
+1002,SKU-1002,IT Devices,Laptop Pro,Laptop Pro Model 03,2024,Growth,828.8,552.0,0.29,1.08,0,0,2024-01-01
+1077,SKU-1077,Medical Devices,Medical Sensor,Medical Sensor Model 18,2024,Mature,152.09,86.19,0.45,1.15,0,0,2024-01-01
+1046,SKU-1046,IT Devices,Tablet Enterprise,Tablet Enterprise Model 07,2024,Growth,524.2,377.87,0.27,1.12,0,0,2024-01-01
+1187,SKU-1187,Services,Service Contract,Service Contract Model 08,2020,New,287.84,122.63,0.62,1.16,0,1,2020-01-01
+1191,SKU-1191,Services,Service Contract,Service Contract Model 12,2022,Decline,298.3,109.55,0.62,1.16,1,0,2022-01-01
+1085,SKU-1085,Medical Devices,Monitoring Device,Monitoring Device Model 06,2022,Growth,798.9,441.18,0.39,1.1,0,0,2022-01-01
+1161,SKU-1161,Accessories,Accessory Kit,Accessory Kit Model 02,2021,Growth,60.42,46.16,0.22,1.05,0,0,2021-01-01
+1036,SKU-1036,IT Devices,Laptop Standard,Laptop Standard Model 17,2018,Mature,580.14,458.66,0.24,1.01,0,0,2018-01-01
+1190,SKU-1190,Services,Service Contract,Service Contract Model 11,2022,Growth,219.56,97.49,0.62,1.16,0,0,2022-01-01
+1061,SKU-1061,Medical Devices,Medical Sensor,Medical Sensor Model 02,2020,Decline,142.34,63.13,0.45,1.15,1,0,2020-01-01
+1022,SKU-1022,IT Devices,Laptop Standard,Laptop Standard Model 03,2021,Growth,665.92,483.94,0.24,1.01,0,0,2021-01-01
+1141,SKU-1141,Legacy Products,Legacy Workstation,Legacy Workstation Model 02,2021,Decline,639.18,552.53,0.18,0.88,1,0,2021-01-01
+1101,SKU-1101,Industrial Tech,Industrial Scanner,Industrial Scanner Model 02,2023,Growth,1295.4,866.59,0.34,1.03,0,0,2023-01-01
+1033,SKU-1033,IT Devices,Laptop Standard,Laptop Standard Model 14,2021,Mature,598.34,498.74,0.24,1.01,0,0,2021-01-01
+1011,SKU-1011,IT Devices,Laptop Pro,Laptop Pro Model 12,2019,Mature,983.83,655.65,0.29,1.08,0,0,2019-01-01
+1194,SKU-1194,Services,Service Contract,Service Contract Model 15,2023,New,276.92,105.07,0.62,1.16,0,1,2023-01-01
+1159,SKU-1159,Legacy Products,Legacy Workstation,Legacy Workstation Model 20,2021,Decline,636.49,577.0,0.18,0.88,1,0,2021-01-01
+1006,SKU-1006,IT Devices,Laptop Pro,Laptop Pro Model 07,2018,Decline,897.96,613.65,0.29,1.08,1,0,2018-01-01
+1027,SKU-1027,IT Devices,Laptop Standard,Laptop Standard Model 08,2022,Mature,470.29,347.2,0.24,1.01,0,0,2022-01-01
+1120,SKU-1120,Components,Connectivity Module,Connectivity Module Model 01,2021,Mature,93.85,66.35,0.31,1.18,0,0,2021-01-01

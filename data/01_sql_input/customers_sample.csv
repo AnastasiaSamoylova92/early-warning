@@ -1,0 +1,101 @@
+customer_id,customer_code,customer_segment,industry,region_id,customer_since,customer_size_score,base_churn_probability,churn_risk_band
+1179,CUST-01179,Enterprise,Government,6,2022-06-10,5.996,0.027,Low Churn Risk
+866,CUST-00866,SMB,Retail,6,2022-04-07,1.019,0.19,High Churn Risk
+102,CUST-00102,SMB,Logistics,10,2022-12-30,1.97,0.151,High Churn Risk
+440,CUST-00440,Enterprise,Logistics,2,2022-05-15,7.866,0.042,Low Churn Risk
+59,CUST-00059,SMB,Logistics,6,2023-04-09,0.697,0.232,High Churn Risk
+1121,CUST-01121,SMB,Government,6,2023-02-21,1.366,0.119,Medium Churn Risk
+324,CUST-00324,SMB,Logistics,5,2020-02-07,0.404,0.139,High Churn Risk
+975,CUST-00975,Distributor,Manufacturing,3,2020-08-16,4.959,0.108,Medium Churn Risk
+412,CUST-00412,Distributor,Logistics,2,2023-07-26,7.214,0.086,Medium Churn Risk
+856,CUST-00856,Distributor,Manufacturing,3,2023-10-27,2.734,0.093,Medium Churn Risk
+821,CUST-00821,Mid-Market,Government,2,2021-10-10,1.156,0.066,Low Churn Risk
+45,CUST-00045,Distributor,Technology,2,2023-12-11,1.725,0.127,High Churn Risk
+50,CUST-00050,Distributor,Education,9,2021-04-19,6.996,0.112,Medium Churn Risk
+850,CUST-00850,Public Sector,Retail,5,2023-05-13,2.673,0.057,Low Churn Risk
+241,CUST-00241,SMB,Manufacturing,7,2023-09-17,1.182,0.185,High Churn Risk
+171,CUST-00171,SMB,Education,4,2023-06-02,0.757,0.136,High Churn Risk
+524,CUST-00524,Enterprise,Technology,7,2021-01-21,5.537,0.02,Low Churn Risk
+766,CUST-00766,Enterprise,Government,8,2022-12-11,10.224,0.038,Low Churn Risk
+839,CUST-00839,Mid-Market,Manufacturing,10,2022-06-17,6.757,0.054,Low Churn Risk
+424,CUST-00424,Mid-Market,Manufacturing,1,2021-05-02,2.464,0.09,Medium Churn Risk
+381,CUST-00381,Enterprise,Manufacturing,8,2022-03-11,7.082,0.028,Low Churn Risk
+610,CUST-00610,SMB,Government,5,2023-06-13,0.236,0.144,High Churn Risk
+677,CUST-00677,Mid-Market,Healthcare,10,2022-11-01,7.488,0.089,Medium Churn Risk
+345,CUST-00345,Enterprise,Logistics,6,2022-07-11,18.474,0.032,Low Churn Risk
+110,CUST-00110,Distributor,Healthcare,10,2022-09-18,3.677,0.08,Medium Churn Risk
+278,CUST-00278,Distributor,Logistics,2,2021-12-17,7.272,0.061,Low Churn Risk
+678,CUST-00678,Enterprise,Retail,1,2021-12-30,53.472,0.035,Low Churn Risk
+571,CUST-00571,SMB,Healthcare,3,2022-06-07,0.775,0.159,High Churn Risk
+359,CUST-00359,Mid-Market,Technology,1,2022-06-02,3.87,0.081,Medium Churn Risk
+599,CUST-00599,SMB,Healthcare,6,2024-01-18,0.706,0.14,High Churn Risk
+391,CUST-00391,Public Sector,Education,1,2021-11-19,1.173,0.066,Low Churn Risk
+894,CUST-00894,Mid-Market,Logistics,1,2023-04-06,1.837,0.048,Low Churn Risk
+693,CUST-00693,SMB,Manufacturing,7,2020-12-15,0.936,0.183,High Churn Risk
+728,CUST-00728,Mid-Market,Technology,5,2024-02-05,4.898,0.101,Medium Churn Risk
+363,CUST-00363,Public Sector,Retail,10,2020-09-22,3.552,0.062,Low Churn Risk
+597,CUST-00597,SMB,Retail,2,2020-07-13,0.659,0.184,High Churn Risk
+428,CUST-00428,SMB,Education,6,2020-11-22,0.999,0.183,High Churn Risk
+71,CUST-00071,Mid-Market,Healthcare,10,2023-07-04,2.57,0.071,Medium Churn Risk
+322,CUST-00322,SMB,Healthcare,5,2020-03-28,0.904,0.179,High Churn Risk
+653,CUST-00653,SMB,Technology,9,2022-01-04,2.293,0.21,High Churn Risk
+1066,CUST-01066,Public Sector,Manufacturing,1,2023-08-10,1.79,0.034,Low Churn Risk
+108,CUST-00108,Public Sector,Healthcare,10,2021-01-02,3.446,0.067,Low Churn Risk
+1109,CUST-01109,SMB,Healthcare,2,2021-09-24,0.863,0.16,High Churn Risk
+356,CUST-00356,Mid-Market,Manufacturing,5,2021-03-25,7.706,0.092,Medium Churn Risk
+951,CUST-00951,Enterprise,Technology,6,2022-04-06,11.347,0.021,Low Churn Risk
+343,CUST-00343,Mid-Market,Technology,5,2020-12-29,3.273,0.099,Medium Churn Risk
+355,CUST-00355,Mid-Market,Education,9,2023-10-13,1.112,0.089,Medium Churn Risk
+24,CUST-00024,Mid-Market,Manufacturing,2,2021-03-20,2.173,0.095,Medium Churn Risk
+44,CUST-00044,Mid-Market,Healthcare,2,2023-02-22,4.921,0.083,Medium Churn Risk
+244,CUST-00244,Public Sector,Technology,3,2020-01-05,6.378,0.051,Low Churn Risk
+738,CUST-00738,Mid-Market,Healthcare,3,2023-10-13,2.774,0.101,Medium Churn Risk
+1136,CUST-01136,Public Sector,Technology,1,2020-03-18,1.26,0.044,Low Churn Risk
+368,CUST-00368,SMB,Technology,5,2020-07-01,0.654,0.199,High Churn Risk
+164,CUST-00164,Mid-Market,Retail,9,2022-02-09,17.385,0.093,Medium Churn Risk
+1116,CUST-01116,Public Sector,Manufacturing,2,2020-01-28,1.187,0.051,Low Churn Risk
+333,CUST-00333,SMB,Logistics,1,2022-07-29,1.526,0.21,High Churn Risk
+989,CUST-00989,SMB,Retail,4,2023-08-29,1.735,0.201,High Churn Risk
+1173,CUST-01173,Public Sector,Education,5,2023-02-15,3.322,0.036,Low Churn Risk
+1002,CUST-01002,SMB,Retail,6,2022-05-19,0.48,0.196,High Churn Risk
+378,CUST-00378,SMB,Healthcare,7,2021-04-06,0.803,0.218,High Churn Risk
+310,CUST-00310,Enterprise,Government,7,2020-09-22,12.66,0.037,Low Churn Risk
+156,CUST-00156,Mid-Market,Manufacturing,8,2023-06-15,3.557,0.077,Medium Churn Risk
+211,CUST-00211,Public Sector,Manufacturing,4,2020-03-25,2.444,0.055,Low Churn Risk
+87,CUST-00087,Mid-Market,Technology,10,2021-05-04,3.671,0.068,Low Churn Risk
+169,CUST-00169,Public Sector,Education,5,2024-01-16,3.165,0.062,Low Churn Risk
+995,CUST-00995,SMB,Logistics,7,2021-08-08,1.437,0.147,High Churn Risk
+52,CUST-00052,SMB,Manufacturing,2,2021-04-03,1.277,0.156,High Churn Risk
+439,CUST-00439,Mid-Market,Government,2,2020-08-12,2.406,0.08,Medium Churn Risk
+550,CUST-00550,SMB,Education,3,2021-10-30,0.565,0.207,High Churn Risk
+491,CUST-00491,SMB,Government,5,2020-01-16,1.048,0.168,High Churn Risk
+426,CUST-00426,Mid-Market,Logistics,2,2020-08-26,6.138,0.072,Medium Churn Risk
+136,CUST-00136,SMB,Manufacturing,9,2023-01-03,3.167,0.226,High Churn Risk
+1192,CUST-01192,SMB,Government,1,2022-08-27,0.369,0.199,High Churn Risk
+55,CUST-00055,Enterprise,Government,4,2021-11-06,4.842,0.023,Low Churn Risk
+79,CUST-00079,SMB,Government,4,2023-06-14,1.511,0.132,High Churn Risk
+431,CUST-00431,Public Sector,Technology,3,2023-10-02,2.795,0.051,Low Churn Risk
+185,CUST-00185,Distributor,Retail,9,2023-05-24,7.677,0.074,Medium Churn Risk
+57,CUST-00057,Mid-Market,Manufacturing,7,2021-01-09,3.719,0.083,Medium Churn Risk
+943,CUST-00943,SMB,Manufacturing,1,2023-01-09,0.959,0.123,High Churn Risk
+851,CUST-00851,Public Sector,Manufacturing,4,2023-07-11,2.974,0.053,Low Churn Risk
+1164,CUST-01164,Mid-Market,Government,9,2023-04-19,6.288,0.072,Medium Churn Risk
+219,CUST-00219,Enterprise,Logistics,4,2022-03-26,4.457,0.038,Low Churn Risk
+845,CUST-00845,Distributor,Technology,2,2021-08-20,5.748,0.084,Medium Churn Risk
+114,CUST-00114,Mid-Market,Retail,2,2022-02-09,1.883,0.051,Low Churn Risk
+549,CUST-00549,SMB,Education,9,2023-09-11,1.093,0.166,High Churn Risk
+1019,CUST-01019,Mid-Market,Retail,6,2023-09-24,5.69,0.071,Medium Churn Risk
+1073,CUST-01073,Enterprise,Retail,5,2020-08-20,24.728,0.03,Low Churn Risk
+175,CUST-00175,Public Sector,Education,2,2022-02-13,2.285,0.072,Medium Churn Risk
+1023,CUST-01023,SMB,Retail,7,2021-03-21,0.64,0.173,High Churn Risk
+616,CUST-00616,Mid-Market,Manufacturing,9,2020-04-07,7.69,0.076,Medium Churn Risk
+514,CUST-00514,SMB,Logistics,1,2023-03-29,1.031,0.169,High Churn Risk
+462,CUST-00462,Public Sector,Healthcare,2,2021-05-20,0.929,0.047,Low Churn Risk
+287,CUST-00287,Public Sector,Logistics,6,2023-10-21,2.516,0.066,Low Churn Risk
+382,CUST-00382,Public Sector,Manufacturing,2,2023-03-07,0.913,0.034,Low Churn Risk
+1008,CUST-01008,Public Sector,Education,1,2022-11-15,0.368,0.066,Low Churn Risk
+671,CUST-00671,Enterprise,Education,2,2020-04-15,2.115,0.034,Low Churn Risk
+535,CUST-00535,Distributor,Education,9,2023-08-30,2.721,0.071,Medium Churn Risk
+910,CUST-00910,Enterprise,Manufacturing,6,2021-01-23,8.561,0.023,Low Churn Risk
+293,CUST-00293,SMB,Education,9,2021-04-14,1.45,0.166,High Churn Risk
+124,CUST-00124,Distributor,Healthcare,3,2020-06-17,18.744,0.09,Medium Churn Risk
