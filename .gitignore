@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+
+# large data
+data/feature engineering/
+data/feature_engineering/
+data/ml_baseline/
+data/ml_interpretation_risk_output/
+data/ml_stronger/
+data/new_generated_data/
+data/preprocessed/
+data/sql_input/
