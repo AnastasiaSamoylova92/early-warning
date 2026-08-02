@@ -150,6 +150,6 @@ Monitoring of feature coverage, missing enrichment values, duplicate keys and th
 - deploy the data pipeline using Microsoft Fabric or another cloud platform.
 
 ## Author
-**Ana Sam**  
-Business Intelligence & Data Analytics Portfolio Project
+Anastasia Samoylova
+M.Sc. | BI & Data Analytics | ML
 
