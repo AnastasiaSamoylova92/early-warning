@@ -19,3 +19,21 @@ The system helps commercial teams:
 ## Key data & features
 The model uses signa as sales momentum, customer development, rolling trends, stockouts, backorders, market demand, competitive pressure, CRM activity, pipeline value and campaign engangement.
 To reducte data leakage, rolling features use historical information only, preprocessing is fitted on the training period and validation and test sets represent later time periods.
+
+
+## Dashboard Gallery
+
+### Executive Overview
+![Executive Overview](images/01_overview.png)
+
+### Risk Operations
+![Risk Operations](images/02_risk_operations.png)
+
+### Product Risk Details
+![Product Risk Details](images/03_product_risk_details.png)
+
+### Model Performance
+![Model Performance](images/04_model_performance.png)
+
+### Data Quality
+![Data Quality](images/05_data_quality.png)
