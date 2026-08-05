@@ -20,3 +20,6 @@ venv/
 
 # large data
 data/full_data
+
+# outtakes
+notebooks/outtakes.ipynb
