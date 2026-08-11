@@ -1,4 +1,5 @@
--- SELECT DB_NAME() AS AktuelleDB;
+USE RevenueAnalytics;
+GO
 
 CREATE OR ALTER VIEW staging.factSales AS
 
@@ -10,7 +11,7 @@ SELECT
 
     CAST([date] AS DATE) AS order_date,
 
-    CAST(year_month AS DATE) AS year_month,
+    CAST(year_month + '-01' AS DATE) AS year_month,
 
     customer_id,
     product_id,
@@ -65,11 +66,9 @@ SELECT
         WHEN gross_margin_pct IS NULL THEN 1
         ELSE 0
     END AS missing_margin_flag
-FROM raw.factSales;
+FROM dbo.factSales;
 
-SELECT TOP 10 * from staging.factSales;
-
-CREATE VIEW staging.dimRegion AS
+CREATE OR ALTER VIEW staging.dimRegion AS
 SELECT
     TRY_CAST(region_id AS INT) AS region_id,
     LTRIM(RTRIM(country)) AS country,
@@ -78,7 +77,9 @@ SELECT
     TRY_CAST(fx_to_eur AS DECIMAL(18,6)) AS fx_to_eur,
     TRY_CAST(market_growth_factor AS DECIMAL(9,6)) AS market_growth_factor,
     TRY_CAST(margin_factor AS DECIMAL(9,6)) AS margin_factor
-FROM raw.dimRegion;
+FROM dbo.dimRegion;
+
+SELECT TOP 10 * FROM staging.dimRegion;
 
 CREATE OR ALTER VIEW staging.dimProduct AS
 SELECT
@@ -103,7 +104,9 @@ SELECT
         WHEN lifecycle_stage = 'New' THEN 1 
         ELSE 0 
     END AS is_new_product
-FROM raw.dimProduct;
+FROM dbo.dimProduct;
+
+SELECT TOP 10 * FROM staging.dimProduct;
 
 CREATE OR ALTER VIEW staging.dimCustomer AS
 SELECT
@@ -121,7 +124,9 @@ SELECT
         WHEN TRY_CAST(base_churn_probability AS DECIMAL(9,6)) >= 0.07 THEN 'Medium Churn Risk'
         ELSE 'Low Churn Risk'
     END AS churn_risk_band
-FROM raw.dimCustomer;
+FROM dbo.dimCustomer;
+
+SELECT TOP 10 * FROM staging.dimCustomer;
 
 CREATE OR ALTER VIEW staging.dimSalesRep AS
 SELECT
@@ -130,12 +135,14 @@ SELECT
     TRY_CAST(region_id AS INT) AS region_id,
     LTRIM(RTRIM(seniority)) AS seniority,
     TRY_CAST(annual_quota_eur AS DECIMAL(18,2)) AS annual_quota_eur
-FROM raw.dimSalesRep;
+FROM dbo.dimSalesRep;
+
+SELECT TOP 10 * FROM staging.dimSalesRep;
 
 CREATE OR ALTER VIEW staging.factForecast AS
 SELECT
     TRY_CAST(forecast_id AS BIGINT) AS forecast_id,
-    TRY_CAST(year_month AS DATE) AS year_month,
+    CAST(year_month + '-01' AS DATE) AS year_month,
     TRY_CAST(product_id AS INT) AS product_id,
     TRY_CAST(region_id AS INT) AS region_id,
     LTRIM(RTRIM(forecast_version)) AS forecast_version,
@@ -156,12 +163,13 @@ SELECT
             )
             / TRY_CAST(actual_revenue_eur AS DECIMAL(18,2))
     END AS forecast_error_pct
-FROM raw.factForecast;
+FROM dbo.factForecast;
+
 
 CREATE OR ALTER VIEW staging.factInventory AS
 SELECT
     TRY_CAST(inventory_id AS BIGINT) AS inventory_id,
-    TRY_CAST(year_month AS DATE) AS year_month,
+    CAST(year_month + '-01' AS DATE) AS year_month,
     TRY_CAST(product_id AS INT) AS product_id,
     TRY_CAST(region_id AS INT) AS region_id,
     TRY_CAST(opening_stock_units AS INT) AS opening_stock_units,
@@ -174,12 +182,14 @@ SELECT
         WHEN TRY_CAST(ending_stock_units AS INT) <= 0 THEN 1 
         ELSE 0 
     END AS zero_stock_flag
-FROM raw.factInventory;
+FROM dbo.factInventory;
+
+SELECT TOP 10 * FROM staging.factInventory;
 
 CREATE OR ALTER VIEW staging.factCosts AS
 SELECT
     TRY_CAST(cost_id AS BIGINT) AS cost_id,
-    TRY_CAST(year_month AS DATE) AS year_month,
+    CAST(year_month + '-01' AS DATE) AS year_month,
     TRY_CAST(product_id AS INT) AS product_id,
     TRY_CAST(standard_unit_cost_eur AS DECIMAL(18,4)) AS standard_unit_cost_eur,
     TRY_CAST(actual_unit_cost_eur AS DECIMAL(18,4)) AS actual_unit_cost_eur,
@@ -196,7 +206,9 @@ SELECT
             )
             / TRY_CAST(standard_unit_cost_eur AS DECIMAL(18,4))
     END AS cost_variance_pct
-FROM raw.factCosts;
+FROM dbo.factCosts;
+
+SELECT TOP 10 * FROM staging.factCosts;
 
 CREATE OR ALTER VIEW staging.factCRMActivities AS
 SELECT
@@ -215,7 +227,9 @@ SELECT
         WHEN TRY_CAST(customer_health_score AS DECIMAL(9,2)) >= 50 THEN 'Neutral'
         ELSE 'At Risk'
     END AS customer_health_band
-FROM raw.factCRMActivities;
+FROM dbo.factCRMActivities;
+
+SELECT TOP 10 * FROM staging.factCRMActivities;
 
 CREATE OR ALTER VIEW staging.factReturns AS
 SELECT
@@ -229,7 +243,9 @@ SELECT
     TRY_CAST(return_units AS INT) AS return_units,
     TRY_CAST(return_value_eur AS DECIMAL(18,2)) AS return_value_eur,
     LTRIM(RTRIM(return_reason)) AS return_reason
-FROM raw.factReturns;
+FROM dbo.factReturns;
+
+SELECT TOP 10 * FROM staging.factReturns;
 
 CREATE OR ALTER VIEW staging.factPipeline AS
 SELECT
@@ -260,13 +276,13 @@ SELECT
         WHEN stage = 'Closed Lost' THEN 1
         ELSE 0
     END AS is_closed_lost
-FROM raw.factPipeline;
+FROM dbo.factPipeline;
 
-SELECT TOP 10 * FROM staging.factSales;
+SELECT TOP 10 * FROM staging.factPipeline;
 
 CREATE OR ALTER VIEW staging.factMarketSignals AS
 SELECT
-    TRY_CAST(year_month AS DATE) AS year_month,
+    CAST(year_month + '-01' AS DATE) AS year_month,
     TRY_CAST(region_id  AS INT) AS region_id ,
     LTRIM(RTRIM(product_family )) AS product_family,
     LTRIM(RTRIM(product_group  )) AS product_group,
@@ -283,5 +299,35 @@ SELECT
     TRY_CAST(market_opportunity_score   AS DECIMAL(9,2)) AS market_opportunity_score  ,
     TRY_CAST(regional_market_growth_factor   AS DECIMAL(9,2)) AS regional_market_growth_factor
 
-FROM raw.factMarketSignals;
+FROM dbo.factMarketSignals;
 
+CREATE OR ALTER VIEW staging.factMarketActivities AS
+SELECT
+    CAST(year_month + '-01' AS DATE) AS year_month,
+
+    TRY_CAST(region_id  AS INT) AS region_id ,
+    TRY_CAST(product_id   AS INT) AS product_id,
+
+    TRY_CAST(campaign_flag   AS BIT) AS campaign_flag ,
+    LTRIM(RTRIM(campaign_channel )) AS campaign_channel,
+
+    TRY_CAST(campaign_spend_eur AS DECIMAL(18,2)) AS campaign_spend_eur,
+    TRY_CAST(campaign_impressions  AS INT) AS campaign_impressions ,
+    TRY_CAST(campaign_clicks   AS INT) AS campaign_clicks,
+    TRY_CAST(campaign_ctr_pct AS DECIMAL(9,3)) AS campaign_ctr_pct,
+
+    TRY_CAST(website_visits   AS INT) AS website_visits  ,
+    TRY_CAST(product_page_views    AS INT) AS product_page_views ,
+    TRY_CAST(demo_requests   AS INT) AS demo_requests  ,
+    TRY_CAST(marketing_qualified_leads    AS INT) AS marketing_qualified_leads ,
+
+    TRY_CAST(cost_per_lead_eur  AS DECIMAL(18,2)) AS cost_per_lead_eur,
+
+    TRY_CAST(regional_crm_activity_index  AS DECIMAL(9,2)) AS regional_crm_activity_index ,
+    TRY_CAST(pipeline_interest_index   AS DECIMAL(9,2)) AS pipeline_interest_index
+
+FROM dbo.factMarketActivities;
+
+SELECT TOP  10 * from staging.factMarketSignals;
+
+SELECT TOP 10 * FROM dbo.factMarketActivities;
