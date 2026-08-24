@@ -1,0 +1,109 @@
+table factCRMActivities
+	lineageTag: e56c23bc-adf3-48d0-879b-b2325d1e73fc
+
+	column activity_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f241083-8082-4e78-a4ca-eb437fadd32d
+		summarizeBy: sum
+		sourceColumn: activity_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 60801050-6407-46b3-8ab4-cc4141dbe2a0
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1668e348-33c5-4586-a9b0-c7bdff192968
+		summarizeBy: none
+		sourceColumn: activity_date
+
+		variation Variation
+			isDefault
+			relationship: abca0232-2f73-4069-99c0-1f3ee8b670db
+			defaultHierarchy: LocalDateTable_2f05523b-c270-482f-a126-c2f6889296ad.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 46207968-e1f1-4a83-bcc7-18cfbf8d9d1a
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fa95525-8ebe-4d9f-a30f-e69cb71d6e70
+		summarizeBy: none
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_type
+		dataType: string
+		lineageTag: 1977ab53-4d27-4d94-bf18-b2802ea632fb
+		summarizeBy: none
+		sourceColumn: activity_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_minutes
+		dataType: int64
+		formatString: 0
+		lineageTag: 5be3be3d-ad5f-4fcf-bfb5-0499508293a2
+		summarizeBy: sum
+		sourceColumn: activity_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sentiment_score
+		dataType: double
+		lineageTag: 32862a1e-4dcb-413e-a0ae-dd7ef4f0794c
+		summarizeBy: sum
+		sourceColumn: sentiment_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column customer_health_score
+		dataType: double
+		lineageTag: 08cc5d51-7e80-4883-ab1b-0e37559d5fc3
+		summarizeBy: sum
+		sourceColumn: customer_health_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column customer_health_band
+		dataType: string
+		lineageTag: cdee6de7-4904-4661-b2cf-7aa77ae90d68
+		summarizeBy: none
+		sourceColumn: customer_health_band
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factCRMActivities = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factCRMActivities"]}[Data]
+				in
+				  #"Navigation 1"
+

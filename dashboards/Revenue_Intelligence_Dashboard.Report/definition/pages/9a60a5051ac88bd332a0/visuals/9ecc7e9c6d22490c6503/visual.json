@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "9ecc7e9c6d22490c6503",
+  "position": {
+    "x": 148.51419031719533,
+    "y": 413.48914858096828,
+    "z": 14000,
+    "height": 306.644407345576,
+    "width": 438.06343906510853,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "factPipeline"
+                    }
+                  },
+                  "Property": "stage"
+                }
+              },
+              "queryRef": "factPipeline.stage",
+              "nativeQueryRef": "stage",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "factPipeline"
+                        }
+                      },
+                      "Property": "weighted_pipeline_eur"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(factPipeline.weighted_pipeline_eur)",
+              "nativeQueryRef": "Sum of weighted_pipeline_eur"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "factCRMActivities"
+                        }
+                      },
+                      "Property": "activity_minutes"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(factCRMActivities.activity_minutes)",
+              "nativeQueryRef": "Sum of activity_minutes",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "factPipeline"
+                        }
+                      },
+                      "Property": "win_probability"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(factPipeline.win_probability)",
+              "nativeQueryRef": "Average of win_probability"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'CRM ACTIVITY VS WIN PROBABILITY'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,56 @@
+table dimPvmWaterfallCategories
+	lineageTag: ea159ec3-b0f8-4590-afa9-9d18ec8bb315
+
+	column Category
+		lineageTag: 6cea943b-fbe1-49b6-af73-210caa8690f1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Category]
+		sortByColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		formatString: 0
+		lineageTag: d95dc893-8c2e-4312-85ad-e51c917c5167
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsTotal
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0d317821-35c5-40c4-863c-e80aa5d47dfe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [IsTotal]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimPvmWaterfallCategories = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Category", STRING, "Order", INTEGER, "IsTotal", BOOLEAN,
+				    {
+				        { "PY", 0, TRUE  },
+				        { "Gross Profit PY", 1, TRUE  },
+				        { "Price",      2, FALSE },
+				        { "Volume",     3, FALSE },
+				        { "Mix",        4, FALSE },
+				        { "New Product", 5, FALSE }, 
+				        { "Discontinued Product", 6, FALSE }, 
+				        { "Cost", 7, FALSE }, 
+				        { "Other", 8, FALSE }, 
+				        { "New", 9, FALSE},
+				        { "Churn", 10, FALSE},
+				        { "Existing", 11, FALSE},
+				        { "CY",   12, TRUE  },
+				        { "Gross Profit CY",   13, TRUE  }})
+				
+				```
+
+	annotation PBI_Id = afde806e55ec4f0887dbd8a54a067a01
+

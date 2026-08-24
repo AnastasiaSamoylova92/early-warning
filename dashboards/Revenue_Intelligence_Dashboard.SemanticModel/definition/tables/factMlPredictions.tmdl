@@ -1,0 +1,630 @@
+table factMlPredictions
+	lineageTag: 80f9d916-bcc0-440a-8081-27f71e7a6e7d
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a54174b-582c-4688-a7c6-6004873767e8
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: aaf75f63-5851-480a-989a-4203efaa58e9
+		summarizeBy: none
+		sourceColumn: year_month
+
+		variation Variation
+			isDefault
+			relationship: 8008fcbf-5e63-4065-bf05-edca581323ed
+			defaultHierarchy: LocalDateTable_14fd7077-36b9-42ce-83f6-1e6efbc5d2f8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 064d8272-aa82-43a8-b377-f52b59ac8646
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column next_month_risk_label
+		dataType: int64
+		formatString: 0
+		lineageTag: a440dba0-bec3-478e-b927-7b6fad34632b
+		summarizeBy: sum
+		sourceColumn: next_month_risk_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column split
+		dataType: string
+		lineageTag: 1252a370-3248-420e-a6a6-0e3780aa4004
+		summarizeBy: none
+		sourceColumn: split
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_risk_label_num
+		dataType: int64
+		formatString: 0
+		lineageTag: 2bd7922f-fe84-4c7a-bed1-e1a58379ccd8
+		summarizeBy: sum
+		sourceColumn: actual_risk_label_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_risk_label
+		dataType: string
+		lineageTag: bd7bf844-be0a-4b27-8087-4421bce7ce46
+		summarizeBy: none
+		sourceColumn: actual_risk_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column predicted_risk_label_num
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a5ca062-113b-4aa7-801c-a9de8ff52ece
+		summarizeBy: sum
+		sourceColumn: predicted_risk_label_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column predicted_risk_label
+		dataType: string
+		lineageTag: be77aa9f-ff53-44c5-aa57-110c916592cf
+		summarizeBy: none
+		sourceColumn: predicted_risk_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column prob_low_risk
+		dataType: double
+		lineageTag: a3f2b0b1-cf34-4469-9e7b-bb2de5cd9e65
+		summarizeBy: sum
+		sourceColumn: prob_low_risk
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column prob_medium_risk
+		dataType: double
+		lineageTag: e7bcae65-3a25-490d-871d-68ce520f479f
+		summarizeBy: sum
+		sourceColumn: prob_medium_risk
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_risk_probability
+		dataType: double
+		lineageTag: 2409a105-eece-4e2f-8324-da5b455a9ffa
+		summarizeBy: sum
+		sourceColumn: high_risk_probability
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column risk_score
+		dataType: int64
+		formatString: 0
+		lineageTag: 7874afa1-2c01-40cc-8a33-3267835615ec
+		summarizeBy: none
+		sourceColumn: risk_score
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column is_high_risk_alert
+		dataType: int64
+		formatString: 0
+		lineageTag: 645625d7-fede-4455-a8db-ba404154db92
+		summarizeBy: sum
+		sourceColumn: is_high_risk_alert
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_false_alarm
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a0cb470-e863-4a88-85b8-60d9c155c625
+		summarizeBy: sum
+		sourceColumn: is_false_alarm
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_missed_high_risk
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a2a3781-b6fc-4acb-8d7e-6d6e7babcedf
+		summarizeBy: sum
+		sourceColumn: is_missed_high_risk
+
+		annotation SummarizationSetBy = Automatic
+
+	column lifecycle_stage
+		dataType: string
+		lineageTag: ca98981d-cb3f-4dda-afbb-ef51751318cc
+		summarizeBy: none
+		sourceColumn: lifecycle_stage
+
+		annotation SummarizationSetBy = Automatic
+
+	column units_sold
+		dataType: int64
+		formatString: 0
+		lineageTag: 41642fed-674c-49a2-9cd0-6d24e1858d45
+		summarizeBy: sum
+		sourceColumn: units_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column revenue
+		dataType: decimal
+		lineageTag: ab5f4a7d-de84-4a1a-bc0b-88d48ebb0584
+		summarizeBy: sum
+		sourceColumn: revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column unique_customers
+		dataType: int64
+		formatString: 0
+		lineageTag: 67f97641-9d5b-4f96-9b23-6d3c0e5e20b5
+		summarizeBy: sum
+		sourceColumn: unique_customers
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_discount_pct
+		dataType: double
+		lineageTag: bfd2e0c3-753d-4f7b-bbdd-17602be9f255
+		summarizeBy: sum
+		sourceColumn: avg_discount_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column market_demand_index
+		dataType: int64
+		lineageTag: 05bc9571-89d9-439d-9167-0add3f2ee087
+		summarizeBy: sum
+		sourceColumn: market_demand_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column competitor_pressure_index
+		dataType: int64
+		lineageTag: dc701c82-8478-414e-a2c7-8c6f966467b0
+		summarizeBy: sum
+		sourceColumn: competitor_pressure_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column stockout_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: b0571642-aabd-4ac8-9226-1943f0eb23bb
+		summarizeBy: sum
+		sourceColumn: stockout_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column backorder_units
+		dataType: int64
+		formatString: 0
+		lineageTag: ed7bfd34-ae6a-4adf-8d06-c22cbc65ae83
+		summarizeBy: sum
+		sourceColumn: backorder_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cee7318-4323-4c55-9345-d4d1e5db76dd
+		summarizeBy: sum
+		sourceColumn: campaign_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column website_visits
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b895468-bf53-4b17-82a6-4aaf2c79ce2e
+		summarizeBy: sum
+		sourceColumn: website_visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column demo_requests
+		dataType: int64
+		formatString: 0
+		lineageTag: e486b458-4646-4612-b092-acd8500c9a21
+		summarizeBy: sum
+		sourceColumn: demo_requests
+
+		annotation SummarizationSetBy = Automatic
+
+	column estimated_gross_profit
+		dataType: int64
+		lineageTag: 15fddbdb-7142-4042-ae9a-40753e32a56b
+		summarizeBy: sum
+		sourceColumn: estimated_gross_profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column estimated_gross_margin_pct
+		dataType: int64
+		lineageTag: 2f76ca7a-3bf9-41ae-8189-81e888cd75c6
+		summarizeBy: sum
+		sourceColumn: estimated_gross_margin_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column product_unit_share_category_region
+		dataType: int64
+		lineageTag: 3b4078d8-4b6d-44ed-a8c6-4a74c51fb1fd
+		summarizeBy: sum
+		sourceColumn: product_unit_share_category_region
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column unit_share_change_pct
+		dataType: int64
+		lineageTag: 6c1957fc-cf86-47ea-90a6-a9f0e3efee09
+		summarizeBy: sum
+		sourceColumn: unit_share_change_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column risk_factor_under_trend
+		dataType: int64
+		formatString: 0
+		lineageTag: 567c05cd-da67-4855-9ffc-8d002cc49a2d
+		summarizeBy: sum
+		sourceColumn: risk_factor_under_trend
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_factor_volatility
+		dataType: int64
+		formatString: 0
+		lineageTag: 65501b38-2fdb-4b33-a36a-cb4d6878dd1b
+		summarizeBy: sum
+		sourceColumn: risk_factor_volatility
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_factor_sales_drop
+		dataType: int64
+		formatString: 0
+		lineageTag: ea8663a4-3f40-4cbd-9320-145bac028e94
+		summarizeBy: sum
+		sourceColumn: risk_factor_sales_drop
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_factor_customer_drop
+		dataType: int64
+		formatString: 0
+		lineageTag: 7720cc1d-fe4e-4b04-b841-54cd714935d3
+		summarizeBy: sum
+		sourceColumn: risk_factor_customer_drop
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_count_growth_pct
+		dataType: int64
+		lineageTag: 0470be89-3a51-48b4-8b82-c30160979bb3
+		summarizeBy: sum
+		sourceColumn: customer_count_growth_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column market_tailwind_score
+		dataType: int64
+		lineageTag: ee80c0b1-e622-41a5-bf78-29c8030e52ae
+		summarizeBy: sum
+		sourceColumn: market_tailwind_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_competition_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 41eba62e-63db-447e-99ca-e633c3346486
+		summarizeBy: sum
+		sourceColumn: high_competition_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column margin_gap_vs_target
+		dataType: int64
+		lineageTag: 140ce8c4-fd25-48db-98ab-1880df1bb8c7
+		summarizeBy: sum
+		sourceColumn: margin_gap_vs_target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column campaign_active_with_no_sales
+		dataType: int64
+		formatString: 0
+		lineageTag: 671a4eaa-ddac-4444-ab98-b41ffd37c664
+		summarizeBy: sum
+		sourceColumn: campaign_active_with_no_sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_drivers
+		dataType: string
+		lineageTag: b0c44679-daf4-4824-a8da-10684874080d
+		summarizeBy: none
+		sourceColumn: risk_drivers
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ddde53e8-0557-4477-83bc-249ebb41e424
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_score_normalized =
+			
+			DIVIDE (
+			    factMlPredictions[risk_score],
+			    10,
+			    0
+			)
+		formatString: 0.0
+		lineageTag: 0d977386-7f8d-4225-9311-2de489a3edc0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column target_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9fd26d7d-8bb2-45ed-84b1-0185b1643377
+		summarizeBy: none
+		sourceColumn: target_month
+
+		variation Variation
+			isDefault
+			relationship: 4158a087-372f-47db-a605-3ba88e4653b6
+			defaultHierarchy: LocalDateTable_f04d3cc4-c78d-499e-b32e-b2c5e0e3440b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column split_row_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e5b5b1f-926d-4e10-825a-9efe7020f3a4
+		summarizeBy: sum
+		sourceColumn: split_row_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_scope
+		dataType: string
+		lineageTag: bc901c91-8851-4050-8d50-dc30fcf52da4
+		summarizeBy: none
+		sourceColumn: model_scope
+
+		annotation SummarizationSetBy = Automatic
+
+	column high_risk_probability_pct
+		dataType: double
+		lineageTag: fa7f5085-b58c-4e82-8df1-f1f05800a9b4
+		summarizeBy: sum
+		sourceColumn: high_risk_probability_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column risk_score_0_10
+		dataType: double
+		lineageTag: 1a40e830-a9f2-4a73-a8c8-011ab3ce7dc5
+		summarizeBy: sum
+		sourceColumn: risk_score_0_10
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column selected_high_risk_threshold
+		dataType: double
+		lineageTag: 27a32397-6aa3-40ac-837a-23238e26759a
+		summarizeBy: sum
+		sourceColumn: selected_high_risk_threshold
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_any_risk_alert
+		dataType: int64
+		formatString: 0
+		lineageTag: 62b31dc1-ba3d-472e-8443-7d7e6fbe5f72
+		summarizeBy: sum
+		sourceColumn: is_any_risk_alert
+
+		annotation SummarizationSetBy = Automatic
+
+	column supply_pressure_score
+		dataType: int64
+		formatString: 0
+		lineageTag: aa6c066c-60cf-4645-9dab-b9e56d83a996
+		summarizeBy: sum
+		sourceColumn: supply_pressure_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column commercial_pressure_score
+		dataType: int64
+		formatString: 0
+		lineageTag: 13284ac4-f02a-4c2d-8148-286e138ef40a
+		summarizeBy: sum
+		sourceColumn: commercial_pressure_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column demand_supply_mismatch_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: b47025d1-8981-48a6-b9c3-b8517ae45545
+		summarizeBy: sum
+		sourceColumn: demand_supply_mismatch_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column revenue_at_risk_proxy
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a6fd60f-bf2e-4bba-9070-6b05175aa22f
+		summarizeBy: sum
+		sourceColumn: revenue_at_risk_proxy
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_explained_class
+		dataType: string
+		lineageTag: 8bd10ca6-fd1f-439a-82bf-28f7809f198b
+		summarizeBy: none
+		sourceColumn: model_explained_class
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_explained_class_probability
+		dataType: string
+		lineageTag: 500f4df3-68fc-4fcc-be2f-649bc19d783a
+		summarizeBy: none
+		sourceColumn: model_explained_class_probability
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_explained_class_base_probability
+		dataType: string
+		lineageTag: c7d10fba-5f54-4d05-8a65-3f16e4ce74b7
+		summarizeBy: none
+		sourceColumn: model_explained_class_base_probability
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_risk_indicators
+		dataType: string
+		lineageTag: 2ff8cbef-111f-4548-84cc-24b96efbbd40
+		summarizeBy: none
+		sourceColumn: business_risk_indicators
+
+		annotation SummarizationSetBy = Automatic
+
+	column recommended_action
+		dataType: string
+		lineageTag: d61cc40d-4377-4853-a292-a62175a7dea7
+		summarizeBy: none
+		sourceColumn: recommended_action
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_indicator_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 18814a89-1f2e-40bb-8c9e-a3f073595ad7
+		summarizeBy: sum
+		sourceColumn: business_indicator_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column monitoring_priority
+		dataType: int64
+		formatString: 0
+		lineageTag: e8f7f037-b097-4211-be85-b828725762e8
+		summarizeBy: sum
+		sourceColumn: monitoring_priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_rank_within_split
+		dataType: int64
+		formatString: 0
+		lineageTag: 57c862f3-d3d7-4cf4-ba91-3faea41ea0f0
+		summarizeBy: sum
+		sourceColumn: review_rank_within_split
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_line
+		dataType: string
+		lineageTag: b2909d18-a3bd-4cea-b825-60f9cb8d0247
+		summarizeBy: none
+		sourceColumn: product_line
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_category
+		dataType: string
+		lineageTag: bf7fcf02-1add-4a06-98fb-b73c496d6f96
+		summarizeBy: none
+		sourceColumn: product_category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factMlPredictions = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Benutzer\Anastasia\Lokale Daten\AS Portfolio\early-warning\data\full_data\ml_interpretation_risk_output\risk_predictions_for_dashboard.csv"),[Delimiter=";"]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers",{{"product_id", Int64.Type}, {"year_month", type date}, {"region_id", Int64.Type}, {"region", type text}, {"target_month", type date}, {"next_month_risk_label", Int64.Type}, {"split", type text}, {"split_row_number", Int64.Type}, {"model_scope", type text}, {"actual_risk_label_num", Int64.Type}, {"actual_risk_label", type text}, {"predicted_risk_label_num", Int64.Type}, {"predicted_risk_label", type text}, {"prob_low_risk", Percentage.Type}, {"prob_medium_risk", Percentage.Type}, {"high_risk_probability", Percentage.Type}, {"high_risk_probability_pct", Percentage.Type}, {"risk_score", Int64.Type}, {"risk_score_0_10", type number}, {"selected_high_risk_threshold", Percentage.Type}, {"is_any_risk_alert", Int64.Type}, {"is_high_risk_alert", Int64.Type}, {"is_false_alarm", Int64.Type}, {"is_missed_high_risk", Int64.Type}, {"product_line", type text}, {"product_category", type text}, {"product_name", type text}, {"lifecycle_stage", type text}, {"units_sold", Int64.Type}, {"revenue", Currency.Type}, {"unique_customers", Int64.Type}, {"avg_discount_pct", Percentage.Type}, {"market_demand_index", Int64.Type}, {"competitor_pressure_index", Int64.Type}, {"stockout_flag", Int64.Type}, {"backorder_units", Int64.Type}, {"campaign_flag", Int64.Type}, {"website_visits", Int64.Type}, {"demo_requests", Int64.Type}, {"estimated_gross_profit", Int64.Type}, {"estimated_gross_margin_pct", Int64.Type}, {"product_unit_share_category_region", Int64.Type}, {"unit_share_change_pct", Int64.Type}, {"risk_factor_under_trend", Int64.Type}, {"risk_factor_volatility", Int64.Type}, {"risk_factor_sales_drop", Int64.Type}, {"risk_factor_customer_drop", Int64.Type}, {"supply_pressure_score", Int64.Type}, {"customer_count_growth_pct", Int64.Type}, {"market_tailwind_score", Int64.Type}, {"high_competition_flag", Int64.Type}, {"margin_gap_vs_target", Int64.Type}, {"campaign_active_with_no_sales", Int64.Type}, {"commercial_pressure_score", Int64.Type}, {"demand_supply_mismatch_flag", Int64.Type}, {"revenue_at_risk_proxy", Int64.Type}, {"model_explained_class", type text}, {"model_explained_class_probability", type text}, {"model_explained_class_base_probability", type text}, {"model_high_risk_base_probability", type text}, {"model_driver_1", type text}, {"model_driver_1_contribution_pp", type text}, {"model_driver_1_direction", type text}, {"model_driver_2", type text}, {"model_driver_2_contribution_pp", type text}, {"model_driver_2_direction", type text}, {"model_driver_3", type text}, {"model_driver_3_contribution_pp", type text}, {"model_driver_3_direction", type text}, {"model_driver_4", type text}, {"model_driver_4_contribution_pp", type text}, {"model_driver_4_direction", type text}, {"model_driver_5", type text}, {"model_driver_5_contribution_pp", type text}, {"model_driver_5_direction", type text}, {"business_risk_indicators", type text}, {"risk_drivers", type text}, {"recommended_action", type text}, {"business_indicator_count", Int64.Type}, {"monitoring_priority", Int64.Type}, {"review_rank_within_split", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed column type",{"region", "product_name"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Removed Columns",{"model_driver_1", "model_driver_1_contribution_pp", "model_driver_1_direction", "model_driver_2", "model_driver_2_contribution_pp", "model_driver_2_direction", "model_driver_3", "model_driver_3_contribution_pp", "model_driver_3_direction", "model_driver_4", "model_driver_4_contribution_pp", "model_driver_4_direction", "model_driver_5", "model_high_risk_base_probability", "model_driver_5_contribution_pp", "model_driver_5_direction"}),
+				    #"Added Custom Column" = Table.AddColumn(#"Removed Columns1", "DateKey", each Text.Combine({Date.ToText([year_month], "yyyy"), Date.ToText([year_month], "MM"), Date.ToText([year_month], "dd")}), type text),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom Column",{{"DateKey", Int64.Type}})
+				in
+				  #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

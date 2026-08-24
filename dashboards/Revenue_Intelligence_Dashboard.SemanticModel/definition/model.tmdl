@@ -1,0 +1,54 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-DE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["factSales","dimCustomer","dimProduct","dimSalesRep","factCosts","factCRMActivities","factForecast","factInventory","factPipeline","factReturns","dimRegion","dimDate","factMlPredictions","factMarketActivities","factMarketSignals","dimFeatureImportance","dimFalseAlarmRecallTradeoff","dimFeatureImportanceFamily"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_bf785b4d-584e-4dfa-914f-f20cd192e0b6
+ref table factSales
+ref table LocalDateTable_0640e579-c745-4733-a6c1-155ffb17d3d1
+ref table LocalDateTable_c84fd03d-1da2-4605-9bfb-b7212fa67e7c
+ref table dimCustomer
+ref table LocalDateTable_0ecb0214-7246-4241-9141-1f64249e7d0c
+ref table dimProduct
+ref table dimSalesRep
+ref table factCosts
+ref table LocalDateTable_9c48b623-33d8-4708-8356-14915caa4649
+ref table factCRMActivities
+ref table LocalDateTable_2f05523b-c270-482f-a126-c2f6889296ad
+ref table factForecast
+ref table factInventory
+ref table LocalDateTable_2c387bf5-6ab8-4189-b2c0-04415a869e94
+ref table factPipeline
+ref table LocalDateTable_0f9b9aa6-0e86-4ba5-b451-b54d63891f70
+ref table LocalDateTable_44d8304e-8a23-4708-aa9e-e6886340105f
+ref table factReturns
+ref table LocalDateTable_1e557013-246d-4834-b7a6-62359e6c5756
+ref table dimRegion
+ref table dimDate
+ref table _Measures
+ref table dimPvmWaterfallCategories
+ref table factMlPredictions
+ref table LocalDateTable_14fd7077-36b9-42ce-83f6-1e6efbc5d2f8
+ref table factMarketActivities
+ref table LocalDateTable_f131a635-8d78-49f8-b2ae-95b12bc923e7
+ref table factMarketSignals
+ref table LocalDateTable_fa75e345-bd1f-4dff-b527-a953c6c1ff6d
+ref table dimFeatureImportance
+ref table dimFalseAlarmRecallTradeoff
+ref table factPipelineRunMetadata
+ref table LocalDateTable_54756f1a-bb7c-49e0-b4fa-5858dfdc0430
+ref table LocalDateTable_bbc6488b-0e14-40bc-b31c-967d45cd25e7
+ref table LocalDateTable_f04d3cc4-c78d-499e-b32e-b2c5e0e3440b
+ref table dimFeatureImportanceFamily
+
+ref cultureInfo en-US
+

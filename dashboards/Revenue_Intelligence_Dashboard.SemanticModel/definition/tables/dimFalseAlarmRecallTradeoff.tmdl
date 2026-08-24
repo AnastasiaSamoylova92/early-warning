@@ -1,0 +1,245 @@
+table dimFalseAlarmRecallTradeoff
+	lineageTag: 528e2862-0f14-4368-91cd-c82bfe366142
+
+	column threshold
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7a7063a3-cdf4-491c-a0bf-653831b2a959
+		summarizeBy: sum
+		sourceColumn: threshold
+
+		annotation SummarizationSetBy = Automatic
+
+	column accuracy
+		dataType: double
+		lineageTag: f168eeac-651e-45d0-b94d-d0771daf8e3c
+		summarizeBy: sum
+		sourceColumn: accuracy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column macro_f1
+		dataType: double
+		lineageTag: 4a9a735f-872e-4be5-831a-a4e829934a10
+		summarizeBy: sum
+		sourceColumn: macro_f1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column weighted_f1
+		dataType: double
+		lineageTag: 707f3ffb-839e-4bb3-aefd-de4c60258568
+		summarizeBy: sum
+		sourceColumn: weighted_f1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_risk_recall
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8c563ce6-d275-44ec-b0ee-50d69764e109
+		summarizeBy: sum
+		sourceColumn: high_risk_recall
+
+		annotation SummarizationSetBy = Automatic
+
+	column high_risk_precision
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8ac39064-770a-4af2-9b69-778fb55dc5cf
+		summarizeBy: sum
+		sourceColumn: high_risk_precision
+
+		annotation SummarizationSetBy = Automatic
+
+	column false_alarm_rate
+		dataType: double
+		lineageTag: 30376bc3-6832-49b9-9011-eeca656d321c
+		summarizeBy: sum
+		sourceColumn: false_alarm_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column alert_rate
+		dataType: double
+		lineageTag: d733b418-24ad-4443-ab71-0b74b1d93522
+		summarizeBy: sum
+		sourceColumn: alert_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column model
+		dataType: string
+		lineageTag: de487967-57fc-4a15-97bc-2fe27e9303ad
+		summarizeBy: none
+		sourceColumn: model
+
+		annotation SummarizationSetBy = Automatic
+
+	column split
+		dataType: string
+		lineageTag: 1f7f732b-a4b5-421e-a43b-37d547ae1d5b
+		summarizeBy: none
+		sourceColumn: split
+
+		annotation SummarizationSetBy = Automatic
+
+	column decision_rule
+		dataType: string
+		lineageTag: bf215b24-8ac7-4334-bf81-ca52594e928e
+		summarizeBy: none
+		sourceColumn: decision_rule
+
+		annotation SummarizationSetBy = Automatic
+
+	column balanced_accuracy
+		dataType: double
+		lineageTag: 22eb57f7-aa27-484f-9451-3f4a6a5a33a4
+		summarizeBy: sum
+		sourceColumn: balanced_accuracy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_risk_f1
+		dataType: double
+		lineageTag: 8fefc868-4303-41f2-956d-3eb99eafe50f
+		summarizeBy: sum
+		sourceColumn: high_risk_f1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_risk_f2
+		dataType: double
+		lineageTag: e0774074-c925-46c3-b93f-f1b65c1be62b
+		summarizeBy: sum
+		sourceColumn: high_risk_f2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_risk_alert_rate
+		dataType: double
+		lineageTag: 7db42929-fe16-4939-aae1-5a6d852239ac
+		summarizeBy: sum
+		sourceColumn: high_risk_alert_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_risk_tp
+		dataType: int64
+		formatString: 0
+		lineageTag: ae3e4bd8-5c4d-4783-b787-48d4f3384e9c
+		summarizeBy: sum
+		sourceColumn: high_risk_tp
+
+		annotation SummarizationSetBy = Automatic
+
+	column high_risk_fp
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b7ab20a-8e58-4e58-ae24-005fb41e9ef9
+		summarizeBy: sum
+		sourceColumn: high_risk_fp
+
+		annotation SummarizationSetBy = Automatic
+
+	column high_risk_fn
+		dataType: int64
+		formatString: 0
+		lineageTag: 2165f4c0-e1f0-4be2-b898-bd6357f8af7e
+		summarizeBy: sum
+		sourceColumn: high_risk_fn
+
+		annotation SummarizationSetBy = Automatic
+
+	column high_risk_tn
+		dataType: int64
+		formatString: 0
+		lineageTag: dad252fc-4a1e-4b70-80d6-77459c6a62c3
+		summarizeBy: sum
+		sourceColumn: high_risk_tn
+
+		annotation SummarizationSetBy = Automatic
+
+	column macro_roc_auc_ovr
+		dataType: double
+		lineageTag: 8849985e-78da-4716-b537-ab2cc1128aba
+		summarizeBy: sum
+		sourceColumn: macro_roc_auc_ovr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column macro_pr_auc
+		dataType: double
+		lineageTag: 093a7a9f-028a-476e-bcfc-b832ff464da5
+		summarizeBy: sum
+		sourceColumn: macro_pr_auc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_risk_pr_auc
+		dataType: double
+		lineageTag: 55983d40-2149-4507-b5fc-878bee4a2c08
+		summarizeBy: sum
+		sourceColumn: high_risk_pr_auc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column log_loss
+		dataType: double
+		lineageTag: 40a6a1f0-b0c5-4f74-95ac-9d98f100a25a
+		summarizeBy: sum
+		sourceColumn: log_loss
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column any_risk_alert_rate
+		dataType: double
+		lineageTag: ec0bc6fa-994c-4f91-9321-e1bc44ae25cc
+		summarizeBy: sum
+		sourceColumn: any_risk_alert_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dimFalseAlarmRecallTradeoff = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Benutzer\Anastasia\AS Portfolio\early-warning\data\full_data\ml_interpretation_risk_output\false_alarm_recall_tradeoff.csv"), [Delimiter = ",", Columns = 24, QuoteStyle = QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"model", type text}, {"split", type text}, {"decision_rule", type text}, {"threshold", type number}, {"accuracy", type number}, {"balanced_accuracy", type number}, {"macro_f1", type number}, {"weighted_f1", type number}, {"high_risk_recall", type number}, {"high_risk_precision", type number}, {"high_risk_f1", type number}, {"high_risk_f2", type number}, {"false_alarm_rate", type number}, {"alert_rate", type number}, {"high_risk_alert_rate", type number}, {"high_risk_tp", Int64.Type}, {"high_risk_fp", Int64.Type}, {"high_risk_fn", Int64.Type}, {"high_risk_tn", Int64.Type}, {"macro_roc_auc_ovr", type number}, {"macro_pr_auc", type number}, {"high_risk_pr_auc", type number}, {"log_loss", type number}, {"any_risk_alert_rate", type number}}, "en-US"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Changed column type",{{"threshold", Percentage.Type}, {"accuracy", Percentage.Type}, {"balanced_accuracy", Percentage.Type}, {"macro_f1", Percentage.Type}, {"weighted_f1", Percentage.Type}, {"high_risk_recall", Percentage.Type}, {"high_risk_precision", Percentage.Type}, {"high_risk_f1", Percentage.Type}, {"high_risk_f2", Percentage.Type}, {"false_alarm_rate", Percentage.Type}, {"alert_rate", Percentage.Type}, {"high_risk_alert_rate", Percentage.Type}, {"macro_roc_auc_ovr", Percentage.Type}, {"macro_pr_auc", Percentage.Type}, {"high_risk_pr_auc", Percentage.Type}, {"log_loss", Percentage.Type}, {"any_risk_alert_rate", Percentage.Type}})
+				in
+				  #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

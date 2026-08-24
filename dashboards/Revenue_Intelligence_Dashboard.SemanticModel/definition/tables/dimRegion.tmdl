@@ -1,0 +1,79 @@
+table dimRegion
+	lineageTag: cd13b2b8-8cd3-4cb9-bba3-dc7c62b1e8e1
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ef5c3cb5-09cc-46f0-a1b2-b040caff402b
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 312fb2ae-86f2-42c8-89e7-9090f0f0ccc5
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: b94f1765-4149-4263-bc5c-3705c3f9003e
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency
+		dataType: string
+		lineageTag: d8a58235-20c9-4fb1-ae34-d163b98e56d4
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column fx_to_eur
+		dataType: double
+		lineageTag: 2d8a4cc7-610c-4298-891e-76d487dfb627
+		summarizeBy: sum
+		sourceColumn: fx_to_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column market_growth_factor
+		dataType: double
+		lineageTag: 253c7ac7-9935-4f27-a368-a39f35694a4c
+		summarizeBy: sum
+		sourceColumn: market_growth_factor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column margin_factor
+		dataType: double
+		lineageTag: 9ffb39c3-b30e-4b45-ab81-7ab61bc47eeb
+		summarizeBy: sum
+		sourceColumn: margin_factor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dimRegion = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "dimRegion"]}[Data]
+				in
+				    #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

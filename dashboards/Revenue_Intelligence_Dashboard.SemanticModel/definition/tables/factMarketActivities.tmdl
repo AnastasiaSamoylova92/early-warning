@@ -1,0 +1,171 @@
+table factMarketActivities
+	lineageTag: e80946be-b4ed-494a-9d2b-4867123366ce
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 53fe2f61-2ab6-4357-8102-0332dcd9a971
+		summarizeBy: none
+		sourceColumn: year_month
+
+		variation Variation
+			isDefault
+			relationship: 4cb69169-5d3c-4fa7-ab3c-e6bacbb67bff
+			defaultHierarchy: LocalDateTable_f131a635-8d78-49f8-b2ae-95b12bc923e7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ba89230-0603-4ff9-b3dd-70de7abbc4d7
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d886e54-2bf1-492d-ac74-3a86a5988088
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 73eb4e01-0276-4dac-b007-4f1965fcb86d
+		summarizeBy: none
+		sourceColumn: campaign_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_channel
+		dataType: string
+		lineageTag: 7b7321ea-802f-45bc-a0d9-7ce90f3fbfd6
+		summarizeBy: none
+		sourceColumn: campaign_channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_spend_eur
+		dataType: double
+		lineageTag: ef6b04cb-e70a-4557-a70a-a23af924305c
+		summarizeBy: sum
+		sourceColumn: campaign_spend_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column campaign_impressions
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e3a809a-4fd4-4a3b-a753-d37a6ff33fd8
+		summarizeBy: sum
+		sourceColumn: campaign_impressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_clicks
+		dataType: int64
+		formatString: 0
+		lineageTag: e809e21b-a92a-4e3d-b0ea-699017f2d03e
+		summarizeBy: sum
+		sourceColumn: campaign_clicks
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_ctr_pct
+		dataType: double
+		lineageTag: 7939704e-bcb6-4caf-a42e-e2250083d5d2
+		summarizeBy: sum
+		sourceColumn: campaign_ctr_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column website_visits
+		dataType: int64
+		formatString: 0
+		lineageTag: bd124789-09ac-4e13-a57e-d25943cf18f0
+		summarizeBy: sum
+		sourceColumn: website_visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_page_views
+		dataType: int64
+		formatString: 0
+		lineageTag: cf42383a-8b50-4fd6-bcb2-9675ba668140
+		summarizeBy: sum
+		sourceColumn: product_page_views
+
+		annotation SummarizationSetBy = Automatic
+
+	column demo_requests
+		dataType: int64
+		formatString: 0
+		lineageTag: d1ebb596-3422-4c77-bd6a-99e0e4bcdc00
+		summarizeBy: sum
+		sourceColumn: demo_requests
+
+		annotation SummarizationSetBy = Automatic
+
+	column marketing_qualified_leads
+		dataType: int64
+		formatString: 0
+		lineageTag: 2698bed9-be0a-4210-91cf-b0b21e0d765f
+		summarizeBy: sum
+		sourceColumn: marketing_qualified_leads
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost_per_lead_eur
+		dataType: double
+		lineageTag: 23b999c8-a7d7-4cb7-80f6-dd31bd615018
+		summarizeBy: sum
+		sourceColumn: cost_per_lead_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column regional_crm_activity_index
+		dataType: double
+		lineageTag: 18da2b15-a6f2-4c74-a9f8-f9ce594c3dd1
+		summarizeBy: sum
+		sourceColumn: regional_crm_activity_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pipeline_interest_index
+		dataType: double
+		lineageTag: 3a36b500-91c8-4521-8927-8846e0558aa4
+		summarizeBy: sum
+		sourceColumn: pipeline_interest_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factMarketActivities = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factMarketActivities"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

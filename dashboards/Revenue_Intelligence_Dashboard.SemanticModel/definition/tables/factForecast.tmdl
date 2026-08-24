@@ -1,0 +1,116 @@
+table factForecast
+	lineageTag: 65a1118c-099e-48e5-8255-e90f2b42bd94
+
+	column forecast_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8be4f064-2c99-43ef-880d-912d54850725
+		summarizeBy: none
+		sourceColumn: forecast_id
+
+		annotation SummarizationSetBy = User
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 493805f7-24d1-4fc6-9397-1f53cb053f2c
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 28aa879c-6e5e-46b8-b7aa-c07c636689c9
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a70d6b8-f631-468c-b335-7a3a0a615b58
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column forecast_version
+		dataType: string
+		lineageTag: 8791190e-777a-49a6-97b3-9bd91ca54ce9
+		summarizeBy: none
+		sourceColumn: forecast_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column forecast_units
+		dataType: int64
+		formatString: 0
+		lineageTag: d319e882-fd6a-4da1-94ec-c80c1d4632d5
+		summarizeBy: sum
+		sourceColumn: forecast_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column forecast_revenue_eur
+		dataType: double
+		lineageTag: 19ca937e-207d-4ac3-bca2-f65b1d810b35
+		summarizeBy: sum
+		sourceColumn: forecast_revenue_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_units
+		dataType: int64
+		formatString: 0
+		lineageTag: 9cb75592-1a61-4102-aa1e-d49e763e5c8b
+		summarizeBy: sum
+		sourceColumn: actual_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_revenue_eur
+		dataType: double
+		lineageTag: 16c52b10-85ec-4e90-9dda-4bac9da71ed8
+		summarizeBy: sum
+		sourceColumn: actual_revenue_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column forecast_error_eur
+		dataType: double
+		lineageTag: ba826e72-deef-4c9d-9cdb-a50c6131ef9e
+		summarizeBy: sum
+		sourceColumn: forecast_error_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column forecast_error_pct
+		dataType: double
+		lineageTag: 8f80de84-5445-4885-a13f-258786e92b27
+		summarizeBy: sum
+		sourceColumn: forecast_error_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factForecast = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factForecast"]}[Data]
+				in
+				  #"Navigation 1"
+

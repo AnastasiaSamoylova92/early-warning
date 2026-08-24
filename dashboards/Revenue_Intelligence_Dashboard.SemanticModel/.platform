@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Revenue_Intelligence_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a550865c-6174-4e63-a397-1d95e490e80b"
+  }
+}

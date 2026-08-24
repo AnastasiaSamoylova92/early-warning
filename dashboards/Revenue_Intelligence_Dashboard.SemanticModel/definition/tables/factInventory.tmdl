@@ -1,0 +1,110 @@
+table factInventory
+	lineageTag: b649c97a-2b7a-4191-a074-4cbb09f204ae
+
+	column inventory_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 45b613d1-f069-4221-b7f8-82e0e9c4b8f9
+		summarizeBy: sum
+		sourceColumn: inventory_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a2df3dd1-4d65-4430-804c-de27398cfc5c
+		summarizeBy: none
+		sourceColumn: year_month
+
+		variation Variation
+			isDefault
+			relationship: 9653cc7e-c108-474e-a4f1-9f2a98634853
+			defaultHierarchy: LocalDateTable_2c387bf5-6ab8-4189-b2c0-04415a869e94.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7eb15c5c-d71d-4dd5-ae59-43619a54378c
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c554d88f-76ad-47ec-98f1-a13503637d26
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column opening_stock_units
+		dataType: int64
+		formatString: 0
+		lineageTag: 51505ba1-104c-4105-b2d4-0a0113c59c9a
+		summarizeBy: sum
+		sourceColumn: opening_stock_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_units
+		dataType: int64
+		formatString: 0
+		lineageTag: 653098f6-7651-4550-b952-0dad2bc1505f
+		summarizeBy: sum
+		sourceColumn: production_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column ending_stock_units
+		dataType: int64
+		formatString: 0
+		lineageTag: 32c96f0e-8758-40d3-b935-457dc1dc3781
+		summarizeBy: sum
+		sourceColumn: ending_stock_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column stockout_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d7a468aa-1ded-47c6-9ea8-bec866ef4082
+		summarizeBy: none
+		sourceColumn: stockout_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column inventory_value_eur
+		dataType: double
+		lineageTag: 39d0878d-f62a-46b9-8551-332f14cf2870
+		summarizeBy: sum
+		sourceColumn: inventory_value_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column zero_stock_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 10c73a7b-e0d1-4247-9e7d-bb9ed37d1ec7
+		summarizeBy: sum
+		sourceColumn: zero_stock_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factInventory = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factInventory"]}[Data]
+				in
+				  #"Navigation 1"
+

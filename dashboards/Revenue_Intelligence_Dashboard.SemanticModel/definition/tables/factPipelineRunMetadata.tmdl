@@ -1,0 +1,110 @@
+table factPipelineRunMetadata
+	lineageTag: 94b9dfe2-bd0c-4f50-b0a2-9c0fd9b50b61
+
+	column LastRefreshUTC
+		formatString: General Date
+		lineageTag: 6d4f9533-b134-4752-b883-729fc2e97d57
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [LastRefreshUTC]
+
+		variation Variation
+			isDefault
+			relationship: 5f67d49b-2439-45d1-beb2-2ff07f6736cb
+			defaultHierarchy: LocalDateTable_54756f1a-bb7c-49e0-b4fa-5858dfdc0430.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column RuntimeSeconds
+		formatString: 0
+		lineageTag: 2f9774ab-ce06-45b9-873f-4ce8bca49315
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [RuntimeSeconds]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelRunID
+		lineageTag: 05190014-2c1b-4acc-81fd-f5db3c478f35
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ModelRunID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ArtifactsCreated
+		formatString: 0
+		lineageTag: ebb23331-d37b-4d26-9516-bc09d5cfbe41
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [ArtifactsCreated]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ArtifactsExpected
+		formatString: 0
+		lineageTag: fca57c5d-21a6-43db-b73a-f9918e42c724
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [ArtifactsExpected]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Owner
+		lineageTag: ea8bc7be-b56a-49ef-b574-ff05fd32de59
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Owner]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NextRefreshUTC
+		formatString: General Date
+		lineageTag: 45ec6676-7449-4719-b037-8b7dd53ca117
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [NextRefreshUTC]
+
+		variation Variation
+			isDefault
+			relationship: 5b3088b0-c0d7-4f7d-95ad-fc2c82cbd293
+			defaultHierarchy: LocalDateTable_bbc6488b-0e14-40bc-b31c-967d45cd25e7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factPipelineRunMetadata = calculated
+		mode: import
+		source =
+				
+				VAR _RefreshUTC =
+				    UTCNOW ()
+				
+				-- Daily scheduled refresh at 23:00 UTC
+				VAR _TodayAt23UTC =
+				    DATE (
+				        YEAR ( _RefreshUTC ),
+				        MONTH ( _RefreshUTC ),
+				        DAY ( _RefreshUTC )
+				    )
+				        + TIME ( 23, 0, 0 )
+				
+				VAR _NextRefreshUTC =
+				    IF (
+				        _RefreshUTC < _TodayAt23UTC,
+				        _TodayAt23UTC,
+				        _TodayAt23UTC + 1
+				    )
+				
+				RETURN
+				    ROW (
+				        "LastRefreshUTC",       _RefreshUTC,
+				        "RuntimeSeconds",       462,
+				        "ModelRunID",           "RF_" & FORMAT ( _RefreshUTC, "yyyymmdd_HHmm" ),
+				        "ArtifactsCreated",     7,
+				        "ArtifactsExpected",    7,
+				        "Owner",                "Anastasia Samoylova",
+				        "NextRefreshUTC",       _NextRefreshUTC
+				    )
+
+	annotation PBI_Id = 14d0288fce8f4cbeb2f1fa257f1db148
+

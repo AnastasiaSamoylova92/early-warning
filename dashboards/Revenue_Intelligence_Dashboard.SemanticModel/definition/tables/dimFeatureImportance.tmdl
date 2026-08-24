@@ -1,0 +1,61 @@
+table dimFeatureImportance
+	lineageTag: 1f3f3e90-3103-4a10-83f3-1c19dbee0728
+
+	column feature
+		dataType: string
+		lineageTag: db7f12fb-103d-4cc9-ba8e-8eae2023a40e
+		summarizeBy: none
+		sourceColumn: feature
+
+		annotation SummarizationSetBy = Automatic
+
+	column importance
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 74ea9fd7-6296-43ec-8581-413775e58293
+		summarizeBy: sum
+		sourceColumn: importance
+
+		annotation SummarizationSetBy = Automatic
+
+	column rank
+		dataType: int64
+		formatString: 0
+		lineageTag: f4f42ffe-4151-4f6d-8068-ba4c99be4690
+		summarizeBy: sum
+		sourceColumn: rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column cumulative_importance
+		dataType: double
+		lineageTag: 08af74f7-dcff-41aa-9d05-e5ba10a33c62
+		summarizeBy: sum
+		sourceColumn: cumulative_importance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column feature_family
+		dataType: string
+		lineageTag: 11ce3ac1-24b7-4e2b-8bb7-6d2ba0685c17
+		summarizeBy: none
+		sourceColumn: feature_family
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimFeatureImportance = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Benutzer\Anastasia\Lokale Daten\AS Portfolio\early-warning\data\full_data\ml_interpretation_risk_output\risk_output_feature_importance.csv"), [Delimiter = ",", Columns = 5, QuoteStyle = QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"rank", Int64.Type}, {"feature", type text}, {"importance", type number}, {"cumulative_importance", type number}, {"feature_family", type text}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

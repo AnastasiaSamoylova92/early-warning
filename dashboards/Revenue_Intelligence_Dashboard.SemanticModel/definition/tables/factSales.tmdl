@@ -1,0 +1,270 @@
+table factSales
+	lineageTag: 72f7d35b-0326-493c-b9a7-10d5aa169f93
+
+	column sales_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b2cfc4fb-ce8f-4fe3-a778-26730a6fa671
+		summarizeBy: none
+		sourceColumn: sales_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: string
+		lineageTag: 466a255b-237d-4c62-a77c-d827c14da86c
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 350b70c7-e58e-463c-a144-1e9a6b34fc40
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 81456c18-6453-46ed-9ccd-bcaa4b314577
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variation
+			isDefault
+			relationship: 05a40a4d-6d16-4a85-a745-95a611159645
+			defaultHierarchy: LocalDateTable_0640e579-c745-4733-a6c1-155ffb17d3d1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 00907aa2-4adb-4a18-acee-d30c6d813f09
+		summarizeBy: none
+		sourceColumn: year_month
+
+		variation Variation
+			isDefault
+			relationship: e4f1cd7f-4e3f-4b62-aca9-0039935319fb
+			defaultHierarchy: LocalDateTable_c84fd03d-1da2-4605-9bfb-b7212fa67e7c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b0d7cc3-3875-4143-94b3-5e459575e843
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f2bb23d-2fa2-4fcf-b33c-eff0e25e1b3c
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a92b405-6ab3-40ea-9f8f-e6f02d659c77
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 353b6c7d-ab15-4899-976c-7090ef43a12e
+		summarizeBy: none
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = User
+
+	column units
+		dataType: int64
+		formatString: 0
+		lineageTag: c69d4c99-f218-42ec-a872-87ac2d0f14ab
+		summarizeBy: sum
+		sourceColumn: units
+
+		annotation SummarizationSetBy = Automatic
+
+	column asp_eur
+		dataType: decimal
+		lineageTag: 85d41367-8f43-409a-8bb4-99d52dc5abe3
+		summarizeBy: sum
+		sourceColumn: asp_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount_pct
+		dataType: double
+		lineageTag: eb9e4688-f277-4915-807b-2dfc995c7bbc
+		summarizeBy: sum
+		sourceColumn: discount_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue_eur
+		dataType: decimal
+		lineageTag: cd1cf32f-a61e-406b-a255-b6ffb0a90bf4
+		summarizeBy: sum
+		sourceColumn: revenue_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue_local_currency
+		dataType: decimal
+		lineageTag: bde0ece9-d6de-4cb2-a5ab-7f459011f629
+		summarizeBy: sum
+		sourceColumn: revenue_local_currency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column currency
+		dataType: string
+		lineageTag: 1f3c0f0a-0660-47b4-9d17-1c225343e743
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_cost_eur
+		dataType: decimal
+		lineageTag: d1b8df45-c836-4fda-ba0f-f3ff0a89dd3e
+		summarizeBy: sum
+		sourceColumn: unit_cost_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gross_profit_eur
+		dataType: decimal
+		lineageTag: b5db9066-63d4-474f-91fe-08c8044d2bc0
+		summarizeBy: sum
+		sourceColumn: gross_profit_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gross_margin_pct
+		dataType: double
+		lineageTag: 2b8f23ce-f397-4062-85a4-b78d033d2146
+		summarizeBy: sum
+		sourceColumn: gross_margin_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_outlier_order
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 74a6c979-969c-40a6-940a-86539700d00e
+		summarizeBy: none
+		sourceColumn: is_outlier_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column cogs_eur
+		dataType: decimal
+		lineageTag: e05f8d29-7985-4f32-8700-b4d65da36b16
+		summarizeBy: sum
+		sourceColumn: cogs_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount_value_eur
+		dataType: decimal
+		lineageTag: 5d150704-1ebb-47f5-86cf-d87705089eda
+		summarizeBy: sum
+		sourceColumn: discount_value_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column margin_category
+		dataType: string
+		lineageTag: d7f2c5c6-4e0b-4c3e-9747-f8e4042f0847
+		summarizeBy: none
+		sourceColumn: margin_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_size_category
+		dataType: string
+		lineageTag: 7b5a7a2e-c1a9-4862-bf70-f45783085014
+		summarizeBy: none
+		sourceColumn: order_size_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column missing_sales_rep_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b509f94-e0fc-4145-925a-2bbb1918d424
+		summarizeBy: sum
+		sourceColumn: missing_sales_rep_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column missing_discount_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 83af45d5-f82f-4998-80bf-36246a6e7310
+		summarizeBy: sum
+		sourceColumn: missing_discount_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column missing_margin_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c64ff74-1f7a-455d-8bea-2926e52e8654
+		summarizeBy: sum
+		sourceColumn: missing_margin_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factSales = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factSales"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(#"Navigation 1",{{"revenue_local_currency", Currency.Type}, {"revenue_eur", Currency.Type}, {"asp_eur", Currency.Type}, {"unit_cost_eur", Currency.Type}, {"discount_value_eur", Currency.Type}, {"cogs_eur", Currency.Type}, {"gross_profit_eur", Currency.Type}})
+				in
+				  #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

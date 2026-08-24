@@ -1,0 +1,52 @@
+table dimFeatureImportanceFamily
+	lineageTag: 5324ab06-60ba-4703-887f-cb940a978dde
+
+	column feature_family
+		dataType: string
+		lineageTag: ad1424f1-c4ba-43f9-bf18-5ab07bc112b2
+		summarizeBy: none
+		sourceColumn: feature_family
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_importance
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 46a7a8d2-eba1-4dac-a0d9-7c1100eacdf0
+		summarizeBy: none
+		sourceColumn: total_importance
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 46153777-58d5-46a0-9094-ac7288cd525f
+		summarizeBy: none
+		sourceColumn: feature_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column top_feature
+		dataType: string
+		lineageTag: 83a19d29-edf1-4822-8187-ac548397b9d3
+		summarizeBy: none
+		sourceColumn: top_feature
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimFeatureImportanceFamily = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Benutzer\Anastasia\Lokale Daten\AS Portfolio\early-warning\data\full_data\ml_interpretation_risk_output\risk_output_feature_family_importance.csv"), [Delimiter = ",", Columns = 4, QuoteStyle = QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"feature_family", type text}, {"total_importance", type number}, {"feature_count", Int64.Type}, {"top_feature", type text}}, "en-US"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Changed column type",{{"total_importance", Percentage.Type}})
+				in
+				  #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

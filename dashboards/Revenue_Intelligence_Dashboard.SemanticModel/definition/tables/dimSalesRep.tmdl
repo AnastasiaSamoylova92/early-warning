@@ -1,0 +1,56 @@
+table dimSalesRep
+	lineageTag: 9fed794b-8933-45e8-b9ae-098d5777b632
+
+	column sales_rep_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b3c42672-93db-41bd-a25d-668fde4e721e
+		summarizeBy: none
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_code
+		dataType: string
+		lineageTag: 4de2590c-4df9-404b-8f7d-04211f9fb511
+		summarizeBy: none
+		sourceColumn: sales_rep_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c5c14a1-feb1-446c-ae96-fd757e02f5e2
+		summarizeBy: sum
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seniority
+		dataType: string
+		lineageTag: dc8b4115-539a-44ea-92d7-420c81fd34b7
+		summarizeBy: none
+		sourceColumn: seniority
+
+		annotation SummarizationSetBy = Automatic
+
+	column annual_quota_eur
+		dataType: double
+		lineageTag: 8581dd30-0067-4ef8-a0c3-e336db00903f
+		summarizeBy: sum
+		sourceColumn: annual_quota_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dimSalesRep = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "dimSalesRep"]}[Data]
+				in
+				  #"Navigation 1"
+

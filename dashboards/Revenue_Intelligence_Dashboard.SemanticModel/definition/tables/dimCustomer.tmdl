@@ -1,0 +1,140 @@
+table dimCustomer
+	lineageTag: d7132793-211e-4b72-bc06-6a0f51f0c591
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: fb01d240-b0a0-4c50-a47f-3b6c6a8b17aa
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_code
+		dataType: string
+		lineageTag: 8465af2a-fdf2-4038-a318-40628c984d49
+		summarizeBy: none
+		sourceColumn: customer_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_segment
+		dataType: string
+		lineageTag: 4ea165c1-0433-442e-ba29-581976e18e84
+		summarizeBy: none
+		sourceColumn: customer_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column industry
+		dataType: string
+		lineageTag: dcc93f84-50e9-499a-8545-116f8f514707
+		summarizeBy: none
+		sourceColumn: industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b6ad3b6-4d90-42fa-8318-ab82cf64f6f1
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = User
+
+	column customer_since
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 85fe8ece-1ae5-4e33-902b-f46510ad7d54
+		summarizeBy: none
+		sourceColumn: customer_since
+
+		variation Variation
+			isDefault
+			relationship: 92d53d71-b440-4598-bf83-4d7ab04e773c
+			defaultHierarchy: LocalDateTable_0ecb0214-7246-4241-9141-1f64249e7d0c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customer_size_score
+		dataType: double
+		lineageTag: d2658f12-e107-4e45-a62a-93f16d88b7bd
+		summarizeBy: sum
+		sourceColumn: customer_size_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column base_churn_probability
+		dataType: double
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 168b1398-acac-4691-b95e-b9dbb71e7198
+		summarizeBy: sum
+		sourceColumn: base_churn_probability
+
+		annotation SummarizationSetBy = Automatic
+
+	column churn_risk_band
+		dataType: string
+		lineageTag: 65d302cc-d890-475d-ab6f-519f8cce455d
+		summarizeBy: none
+		sourceColumn: churn_risk_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_cohort = FORMAT(dimCustomer[customer_since], "YYYY-MM")
+		lineageTag: 215241dd-3b04-48e5-8ee9-3c15457adb6a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column months_since_acquisition =
+			VAR _AcquisitionDate = dimCustomer[customer_since]
+			VAR _EndDate = DATE ( 2025, 12, 31 )
+			
+			RETURN
+			IF (
+			    ISBLANK ( _AcquisitionDate ),
+			    BLANK (),
+			    DATEDIFF (
+			        _AcquisitionDate,
+			        _EndDate,
+			        MONTH
+			    )
+			)
+		formatString: 0
+		lineageTag: 4353fcc0-ab2d-48b5-a5f8-3f2b60d90043
+		summarizeBy: sum
+		sortByColumn: customer_cohort_quarter
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_cohort_quarter =
+			
+			"Q" & QUARTER([customer_cohort]) &
+			" " & YEAR([customer_cohort])
+		lineageTag: c291da96-5ec2-45e2-9a64-a9710b6adb07
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimCustomer = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "dimCustomer"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(#"Navigation 1",{{"base_churn_probability", Percentage.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

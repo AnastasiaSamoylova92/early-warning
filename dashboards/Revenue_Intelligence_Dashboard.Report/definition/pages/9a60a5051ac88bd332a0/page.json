@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "9a60a5051ac88bd332a0",
+  "displayName": "COmmercial Growth",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "fb08f89e8e3e0a2a30b6",
+      "target": "84012b9c0032dd99eec3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fb08f89e8e3e0a2a30b6",
+      "target": "1a807b6f6e0c62d4aed0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fb08f89e8e3e0a2a30b6",
+      "target": "9ecc7e9c6d22490c6503",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fb08f89e8e3e0a2a30b6",
+      "target": "05dab3eed40143c5c053",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fb08f89e8e3e0a2a30b6",
+      "target": "e99a8e68855300dacbb2",
+      "type": "NoFilter"
+    }
+  ]
+}

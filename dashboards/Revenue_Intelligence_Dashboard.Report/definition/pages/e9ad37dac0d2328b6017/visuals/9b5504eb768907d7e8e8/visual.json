@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "9b5504eb768907d7e8e8",
+  "position": {
+    "x": 137.14285714285714,
+    "y": 59.331306990881458,
+    "z": 3000,
+    "height": 103.10030395136779,
+    "width": 1134.1033434650456,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+    "query": {
+      "queryState": {
+        "content": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Overview Card HTML - Risk Exposure"
+                }
+              },
+              "queryRef": "_Measures.Overview Card HTML - Risk Exposure",
+              "nativeQueryRef": "Overview Card HTML - Risk Exposure"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

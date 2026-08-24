@@ -1,0 +1,113 @@
+table factReturns
+	lineageTag: 33dbcadd-6f04-47cf-af0a-fbf4b90bf5ff
+
+	column return_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e66c32c-0f58-4afa-8a6b-1828e94e2738
+		summarizeBy: none
+		sourceColumn: return_id
+
+		annotation SummarizationSetBy = User
+
+	column sales_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 96957781-5178-4f48-ade5-313613ded956
+		summarizeBy: none
+		sourceColumn: sales_id
+
+		annotation SummarizationSetBy = User
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 847d5fc7-51af-40c5-81f3-f64f8f828d75
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e09da95b-f6c6-42ae-83ef-92c99f7e45af
+		summarizeBy: none
+		sourceColumn: return_date
+
+		variation Variation
+			isDefault
+			relationship: 0b58ae17-0f89-4a6a-b3ec-8f506ac7a74b
+			defaultHierarchy: LocalDateTable_1e557013-246d-4834-b7a6-62359e6c5756.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d7dcc78-30f4-42ef-8d63-ba30f081d020
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = User
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 08ff5cbc-97f9-4e8d-8ce5-6dc9c4d31793
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = User
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e15f95d8-1182-4604-be8f-14b36b0e439b
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_units
+		dataType: int64
+		formatString: 0
+		lineageTag: e76466d0-58a8-4396-b556-6cad2a6c8b28
+		summarizeBy: sum
+		sourceColumn: return_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_value_eur
+		dataType: double
+		lineageTag: 21be62fe-c05d-4e86-8e16-513ef5525d8f
+		summarizeBy: sum
+		sourceColumn: return_value_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column return_reason
+		dataType: string
+		lineageTag: 4fa187c4-8186-4548-bbda-92eb6bada9bc
+		summarizeBy: none
+		sourceColumn: return_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factReturns = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factReturns"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

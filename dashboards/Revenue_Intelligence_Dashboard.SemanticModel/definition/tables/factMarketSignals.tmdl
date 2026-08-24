@@ -1,0 +1,156 @@
+table factMarketSignals
+	lineageTag: d327059a-c43b-483f-b0cc-9f68a83d5efb
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fad9ec1a-ca64-4b92-9ae2-deaf0f50888d
+		summarizeBy: none
+		sourceColumn: year_month
+
+		variation Variation
+			isDefault
+			relationship: 34006fe6-d6dc-4b45-8b7d-65bd6b9639fe
+			defaultHierarchy: LocalDateTable_fa75e345-bd1f-4dff-b527-a953c6c1ff6d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 10a36950-eed6-40e7-a550-659547160729
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_family
+		dataType: string
+		lineageTag: c18cc5d2-7cf3-4bd2-973a-546ed3ac5ec3
+		summarizeBy: none
+		sourceColumn: product_family
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_group
+		dataType: string
+		lineageTag: c44c919b-40d2-42b1-a3a0-2182acd17598
+		summarizeBy: none
+		sourceColumn: product_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_demand_index
+		dataType: double
+		lineageTag: cb23ad38-95a4-4830-9aa9-395b4467577f
+		summarizeBy: sum
+		sourceColumn: market_demand_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column market_growth_pct
+		dataType: double
+		lineageTag: 36b8f65f-d240-4677-905c-c30c055d580e
+		summarizeBy: sum
+		sourceColumn: market_growth_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column competitor_pressure_index
+		dataType: double
+		lineageTag: 2e12d07f-78d1-4d65-a6f3-ba1b22fd8422
+		summarizeBy: sum
+		sourceColumn: competitor_pressure_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column seasonality_index
+		dataType: double
+		lineageTag: 6115592b-936b-403c-911c-95bb04223066
+		summarizeBy: sum
+		sourceColumn: seasonality_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column macro_business_index
+		dataType: double
+		lineageTag: c013ca67-16e2-4782-9bdd-8170814cfe84
+		summarizeBy: sum
+		sourceColumn: macro_business_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column supply_pressure_index
+		dataType: double
+		lineageTag: 7e047f70-d3ff-4fbd-995d-62853fee19cd
+		summarizeBy: sum
+		sourceColumn: supply_pressure_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pipeline_interest_index
+		dataType: double
+		lineageTag: a1983833-3cd6-4477-81c5-9fbd2d9c8b04
+		summarizeBy: sum
+		sourceColumn: pipeline_interest_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column demand_shock_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f56815ba-0b63-4734-b59b-3f17f3f12c9b
+		summarizeBy: none
+		sourceColumn: demand_shock_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_opportunity_score
+		dataType: double
+		lineageTag: 4994d693-4389-4920-83c2-43eb575eaa43
+		summarizeBy: sum
+		sourceColumn: market_opportunity_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column regional_market_growth_factor
+		dataType: double
+		lineageTag: e5c5dbe1-99a7-4a14-ad8b-8626b0e19a31
+		summarizeBy: sum
+		sourceColumn: regional_market_growth_factor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factMarketSignals = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factMarketSignals"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

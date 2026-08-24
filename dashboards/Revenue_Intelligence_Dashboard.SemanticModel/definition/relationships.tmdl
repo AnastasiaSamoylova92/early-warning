@@ -1,0 +1,207 @@
+relationship 05a40a4d-6d16-4a85-a745-95a611159645
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factSales.order_date
+	toColumn: LocalDateTable_0640e579-c745-4733-a6c1-155ffb17d3d1.Date
+
+relationship e4f1cd7f-4e3f-4b62-aca9-0039935319fb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factSales.year_month
+	toColumn: LocalDateTable_c84fd03d-1da2-4605-9bfb-b7212fa67e7c.Date
+
+relationship 92d53d71-b440-4598-bf83-4d7ab04e773c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimCustomer.customer_since
+	toColumn: LocalDateTable_0ecb0214-7246-4241-9141-1f64249e7d0c.Date
+
+relationship a47d44c8-2fa3-4b0e-a699-5f8d9ba49d22
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factCosts.year_month
+	toColumn: LocalDateTable_9c48b623-33d8-4708-8356-14915caa4649.Date
+
+relationship abca0232-2f73-4069-99c0-1f3ee8b670db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factCRMActivities.activity_date
+	toColumn: LocalDateTable_2f05523b-c270-482f-a126-c2f6889296ad.Date
+
+relationship 9653cc7e-c108-474e-a4f1-9f2a98634853
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factInventory.year_month
+	toColumn: LocalDateTable_2c387bf5-6ab8-4189-b2c0-04415a869e94.Date
+
+relationship a6321047-bd53-44fc-b413-6be30d90b6f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factPipeline.created_date
+	toColumn: LocalDateTable_0f9b9aa6-0e86-4ba5-b451-b54d63891f70.Date
+
+relationship 2344ab15-5569-4178-b4f7-2b5d4990bfcf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factPipeline.expected_close_date
+	toColumn: LocalDateTable_44d8304e-8a23-4708-aa9e-e6886340105f.Date
+
+relationship 0b58ae17-0f89-4a6a-b3ec-8f506ac7a74b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factReturns.return_date
+	toColumn: LocalDateTable_1e557013-246d-4834-b7a6-62359e6c5756.Date
+
+relationship AutoDetected_e28ab9d7-8613-42b4-b1f8-781c8f0c4428
+	fromColumn: factSales.customer_id
+	toColumn: dimCustomer.customer_id
+
+relationship AutoDetected_12f26e74-7ba0-4575-9720-38789979a126
+	fromColumn: factCRMActivities.customer_id
+	toColumn: dimCustomer.customer_id
+
+relationship AutoDetected_b0519883-4e13-47b2-beb0-006bf154a4a0
+	fromColumn: factPipeline.customer_id
+	toColumn: dimCustomer.customer_id
+
+relationship AutoDetected_01f4ef1f-36eb-4baa-a115-d9194629f863
+	isActive: false
+	fromColumn: factReturns.customer_id
+	toColumn: dimCustomer.customer_id
+
+relationship AutoDetected_1f75c5a9-91b4-4285-8def-0221634e8016
+	fromColumn: factSales.product_id
+	toColumn: dimProduct.product_id
+
+relationship AutoDetected_4b8e2c04-723b-4b4d-b8d6-978bf369e4ba
+	fromColumn: factCosts.product_id
+	toColumn: dimProduct.product_id
+
+relationship AutoDetected_25d34c04-5671-4232-ab2b-a69c2452ce37
+	fromColumn: factForecast.product_id
+	toColumn: dimProduct.product_id
+
+relationship AutoDetected_1e8cd659-d563-477c-887b-b9915908f3f0
+	fromColumn: factInventory.product_id
+	toColumn: dimProduct.product_id
+
+relationship AutoDetected_8f6fbaa6-e5ea-436e-a4db-c53060dea984
+	fromColumn: factReturns.product_id
+	toColumn: dimProduct.product_id
+
+relationship AutoDetected_c564d28a-c827-46ec-a8c2-9231949bb014
+	isActive: false
+	fromColumn: factSales.sales_rep_id
+	toColumn: dimSalesRep.sales_rep_id
+
+relationship AutoDetected_feea5abb-8390-46f8-aedb-e7a2fbec95e8
+	fromColumn: factCRMActivities.sales_rep_id
+	toColumn: dimSalesRep.sales_rep_id
+
+relationship AutoDetected_840d351f-445a-45df-8d44-d03a75927e40
+	fromColumn: factPipeline.sales_rep_id
+	toColumn: dimSalesRep.sales_rep_id
+
+relationship AutoDetected_0ef7cb6c-deea-4824-a5c6-366daed59eb0
+	fromColumn: factSales.region_id
+	toColumn: dimRegion.region_id
+
+relationship AutoDetected_0fa3ed39-db8f-4b31-8015-bb3a6b2ecabf
+	isActive: false
+	fromColumn: dimCustomer.region_id
+	toColumn: dimRegion.region_id
+
+relationship AutoDetected_c127d1e0-a22a-490d-8284-4c6d1fe03623
+	isActive: false
+	fromColumn: dimSalesRep.region_id
+	toColumn: dimRegion.region_id
+
+relationship AutoDetected_a56df392-c488-41f6-9a90-eaefce1e100e
+	fromColumn: factForecast.region_id
+	toColumn: dimRegion.region_id
+
+relationship AutoDetected_37f28ced-367e-4b7e-a9d3-18b5e5c4d568
+	fromColumn: factInventory.region_id
+	toColumn: dimRegion.region_id
+
+relationship AutoDetected_c197a29e-56f5-4108-a97f-9689ec6e47b1
+	fromColumn: factReturns.region_id
+	toColumn: dimRegion.region_id
+
+relationship AutoDetected_98d1b161-5aef-4359-a0cb-79ed60ef6f94
+	fromColumn: factSales.date_id
+	toColumn: dimDate.DateKey
+
+relationship AutoDetected_feb4df9c-4b88-4c2f-bb6a-359a2b9f9360
+	fromColumn: factCRMActivities.date_id
+	toColumn: dimDate.DateKey
+
+relationship AutoDetected_8db9f178-abb3-4494-b1b9-c693cee369fa
+	fromColumn: factReturns.date_id
+	toColumn: dimDate.DateKey
+
+relationship 1227c8af-65c9-df84-701b-b05d91304f2f
+	fromColumn: factForecast.year_month
+	toColumn: dimDate.Date
+
+relationship 8008fcbf-5e63-4065-bf05-edca581323ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factMlPredictions.year_month
+	toColumn: LocalDateTable_14fd7077-36b9-42ce-83f6-1e6efbc5d2f8.Date
+
+relationship AutoDetected_80a7a7d9-54ed-48b3-9be5-cf9f704361fb
+	crossFilteringBehavior: bothDirections
+	fromColumn: factMlPredictions.product_id
+	toColumn: dimProduct.product_id
+
+relationship AutoDetected_a1b0d769-c786-494a-a60d-b0e8d11678f0
+	fromColumn: factMlPredictions.region_id
+	toColumn: dimRegion.region_id
+
+relationship AutoDetected_899a78dd-7b1b-47a2-915f-7f1125fb6a61
+	fromColumn: factMlPredictions.DateKey
+	toColumn: dimDate.DateKey
+
+relationship 4cb69169-5d3c-4fa7-ab3c-e6bacbb67bff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factMarketActivities.year_month
+	toColumn: LocalDateTable_f131a635-8d78-49f8-b2ae-95b12bc923e7.Date
+
+relationship AutoDetected_dfda5175-3f8d-49ba-9339-c99dc198704e
+	fromColumn: factMarketActivities.product_id
+	toColumn: dimProduct.product_id
+
+relationship AutoDetected_90985884-42ac-446c-bcf4-aea19ce40fc2
+	fromColumn: factMarketActivities.region_id
+	toColumn: dimRegion.region_id
+
+relationship 34006fe6-d6dc-4b45-8b7d-65bd6b9639fe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factMarketSignals.year_month
+	toColumn: LocalDateTable_fa75e345-bd1f-4dff-b527-a953c6c1ff6d.Date
+
+relationship AutoDetected_8077cf9a-5639-41f7-9b34-6ed9507491c0
+	fromColumn: factMarketSignals.region_id
+	toColumn: dimRegion.region_id
+
+relationship 5f67d49b-2439-45d1-beb2-2ff07f6736cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factPipelineRunMetadata.LastRefreshUTC
+	toColumn: LocalDateTable_54756f1a-bb7c-49e0-b4fa-5858dfdc0430.Date
+
+relationship 5b3088b0-c0d7-4f7d-95ad-fc2c82cbd293
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factPipelineRunMetadata.NextRefreshUTC
+	toColumn: LocalDateTable_bbc6488b-0e14-40bc-b31c-967d45cd25e7.Date
+
+relationship 74f98245-417c-34f8-d2ee-633b1674a2d7
+	crossFilteringBehavior: bothDirections
+	fromColumn: factSales.sales_id
+	toColumn: dimSalesRep.sales_rep_id
+
+relationship 4158a087-372f-47db-a605-3ba88e4653b6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: factMlPredictions.target_month
+	toColumn: LocalDateTable_f04d3cc4-c78d-499e-b32e-b2c5e0e3440b.Date
+
+relationship AutoDetected_a295ccdc-76c4-4b4d-99b8-a2ca533a703d
+	fromColumn: dimFeatureImportance.feature_family
+	toColumn: dimFeatureImportanceFamily.feature_family
+
+relationship 16b26c3c-7046-43c8-5c8b-cb8d21514c3a
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: factCRMActivities.customer_id
+	toColumn: factSales.customer_id
+

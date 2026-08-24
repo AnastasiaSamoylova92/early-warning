@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "5b34ca6b8d48aa8683a0",
+  "displayName": "◎ Forecast",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "aaa9dfc847be0395eee0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "factForecast"
+              }
+            },
+            "Property": "forecast_version"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "bc9d7b990c2080190078",
+      "target": "a5c50ef5d5215b1e53a5",
+      "type": "NoFilter"
+    },
+    {
+      "source": "bc9d7b990c2080190078",
+      "target": "eae5209b55047755dac1",
+      "type": "NoFilter"
+    }
+  ]
+}

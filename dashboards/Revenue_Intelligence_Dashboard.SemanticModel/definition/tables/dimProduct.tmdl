@@ -1,0 +1,127 @@
+table dimProduct
+	lineageTag: 94a796d6-1540-418e-b979-a2c044d05210
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c7e8f08b-0745-46c7-9852-b5a9ccdf63dd
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku
+		dataType: string
+		lineageTag: baa431d7-1c91-40b6-b979-f521f0a8724a
+		summarizeBy: none
+		sourceColumn: sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_family
+		dataType: string
+		lineageTag: bbfc75e1-5bc3-49d0-bdb5-b20e5b580ec7
+		summarizeBy: none
+		sourceColumn: product_family
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_group
+		dataType: string
+		lineageTag: 3748a3c6-d54a-459e-83f1-d1068f5d280d
+		summarizeBy: none
+		sourceColumn: product_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 0d13757e-38fb-420e-a3e7-f740463b24cd
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column launch_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 91b9c264-d954-44f5-89c3-653da2413ad7
+		summarizeBy: sum
+		sourceColumn: launch_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column lifecycle_stage
+		dataType: string
+		lineageTag: 2cba9c95-c013-46e3-9bae-bddb78ee8563
+		summarizeBy: none
+		sourceColumn: lifecycle_stage
+
+		annotation SummarizationSetBy = Automatic
+
+	column base_list_price_eur
+		dataType: double
+		lineageTag: a66f2d7b-bf7b-4a56-ac4d-b2555283ae4b
+		summarizeBy: sum
+		sourceColumn: base_list_price_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column base_unit_cost_eur
+		dataType: double
+		lineageTag: ade627ad-cca0-4a66-8cf4-82861a9c3edf
+		summarizeBy: sum
+		sourceColumn: base_unit_cost_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column target_margin_pct
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 346a586d-d05c-4daf-8fb6-f1041d329e2c
+		summarizeBy: average
+		sourceColumn: target_margin_pct
+
+		annotation SummarizationSetBy = User
+
+	column product_growth_factor
+		dataType: double
+		lineageTag: f053d756-de21-4118-940f-015c11ead0e9
+		summarizeBy: sum
+		sourceColumn: product_growth_factor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_declining_product
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f0ecb78-ee6f-4890-a08b-90685aee4082
+		summarizeBy: sum
+		sourceColumn: is_declining_product
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_new_product
+		dataType: int64
+		formatString: 0
+		lineageTag: 7168f34f-e4fa-4e0a-9788-f7f9f5bdaf13
+		summarizeBy: sum
+		sourceColumn: is_new_product
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimProduct = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "dimProduct"]}[Data]
+				in
+				  #"Navigation 1"
+

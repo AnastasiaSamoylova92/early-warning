@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "c6abe63889aa31bd7161",
+  "displayName": "↗ Revenue ",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "080090282e104de4b0ec",
+      "target": "eb9f84f4d58520577275",
+      "type": "NoFilter"
+    }
+  ]
+}

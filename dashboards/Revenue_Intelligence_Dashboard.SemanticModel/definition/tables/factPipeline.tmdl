@@ -1,0 +1,153 @@
+table factPipeline
+	lineageTag: 82b0b0a1-1483-4adb-ad4d-b1a7cf58caf9
+
+	column opportunity_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 876000ba-ac1f-499a-b7ac-911fb53e6800
+		summarizeBy: none
+		sourceColumn: opportunity_id
+
+		annotation SummarizationSetBy = User
+
+	column created_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8a2c142e-3edb-47f3-8088-eed20bc6a692
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: a6321047-bd53-44fc-b413-6be30d90b6f5
+			defaultHierarchy: LocalDateTable_0f9b9aa6-0e86-4ba5-b451-b54d63891f70.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c551c27d-a64e-4002-99c9-721955ded3c4
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_group
+		dataType: string
+		lineageTag: 5276a3db-e36f-4857-81e5-1eb4e98162e8
+		summarizeBy: none
+		sourceColumn: product_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a3431c7f-1f04-45ad-a384-7260b40556de
+		summarizeBy: none
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column stage
+		dataType: string
+		lineageTag: c15ff1cd-07e7-4322-8819-e87e800d2289
+		summarizeBy: none
+		sourceColumn: stage
+
+		annotation SummarizationSetBy = Automatic
+
+	column expected_value_eur
+		dataType: double
+		lineageTag: 35e46ad1-09ba-45bc-98f6-6e512a6894d6
+		summarizeBy: sum
+		sourceColumn: expected_value_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column win_probability
+		dataType: double
+		lineageTag: 7a3ec908-39a2-4a7d-9d0f-98bcaab9702e
+		summarizeBy: sum
+		sourceColumn: win_probability
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_close_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2a608a72-b747-4996-a231-2bb33856860e
+		summarizeBy: none
+		sourceColumn: expected_close_date
+
+		variation Variation
+			isDefault
+			relationship: 2344ab15-5569-4178-b4f7-2b5d4990bfcf
+			defaultHierarchy: LocalDateTable_44d8304e-8a23-4708-aa9e-e6886340105f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column created_date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8955897b-4d4e-4e6f-b6ae-9dfae64d26ee
+		summarizeBy: none
+		sourceColumn: created_date_id
+
+		annotation SummarizationSetBy = User
+
+	column weighted_pipeline_eur
+		dataType: double
+		lineageTag: 3d23df89-d360-41c1-8e7a-c8a81cb83900
+		summarizeBy: sum
+		sourceColumn: weighted_pipeline_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column days_to_close
+		dataType: int64
+		formatString: 0
+		lineageTag: cfe61fce-37ff-4057-8162-b8c7c580cd43
+		summarizeBy: sum
+		sourceColumn: days_to_close
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_closed_won
+		dataType: int64
+		formatString: 0
+		lineageTag: 30906c9b-64de-4f9b-99d8-92fd6bcf243a
+		summarizeBy: sum
+		sourceColumn: is_closed_won
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_closed_lost
+		dataType: int64
+		formatString: 0
+		lineageTag: 613bede1-f98b-436b-9bcc-b178cc5354c3
+		summarizeBy: sum
+		sourceColumn: is_closed_lost
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factPipeline = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factPipeline"]}[Data]
+				in
+				  #"Navigation 1"
+

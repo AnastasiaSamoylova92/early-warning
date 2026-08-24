@@ -1,0 +1,86 @@
+table factCosts
+	lineageTag: 36e9644c-f4a4-43e3-bdc5-63c138b47a10
+
+	column cost_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a6fed9d9-54f3-40ea-ad0c-250f1993896e
+		summarizeBy: none
+		sourceColumn: cost_id
+
+		annotation SummarizationSetBy = User
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8bbce5c2-b26b-401c-8f53-28da4edd5d65
+		summarizeBy: none
+		sourceColumn: year_month
+
+		variation Variation
+			isDefault
+			relationship: a47d44c8-2fa3-4b0e-a699-5f8d9ba49d22
+			defaultHierarchy: LocalDateTable_9c48b623-33d8-4708-8356-14915caa4649.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b8300680-7789-47b6-ab93-b48a53932513
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column standard_unit_cost_eur
+		dataType: double
+		lineageTag: aff8d29e-4f3d-42d1-8c5d-7bb92a3a4a71
+		summarizeBy: sum
+		sourceColumn: standard_unit_cost_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_unit_cost_eur
+		dataType: double
+		lineageTag: 6ae06897-ecae-426a-991e-360e4a00e6e4
+		summarizeBy: sum
+		sourceColumn: actual_unit_cost_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cost_variance_eur
+		dataType: double
+		lineageTag: 15a63cf4-21ee-43bd-a378-b48598a102cd
+		summarizeBy: sum
+		sourceColumn: cost_variance_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cost_variance_pct
+		dataType: double
+		lineageTag: 0bb8dc73-41a3-4cd2-8ad2-bac104d9390f
+		summarizeBy: sum
+		sourceColumn: cost_variance_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factCosts = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "staging", Item = "factCosts"]}[Data]
+				in
+				  #"Navigation 1"
+

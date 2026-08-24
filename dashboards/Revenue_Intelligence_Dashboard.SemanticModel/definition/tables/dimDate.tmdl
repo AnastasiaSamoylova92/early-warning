@@ -1,0 +1,215 @@
+table dimDate
+	lineageTag: a15db740-b9f6-402b-989f-a216bb1f07af
+	dataCategory: Time
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 32012d60-9a8f-4ab1-8f5c-9fca1391812e
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: e1bed058-2b53-4817-9dbf-710248f64ea5
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: c9e19d87-d245-4c59-8bb4-6cc3e7868794
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: fd38b872-e0db-49b0-8687-25b953934306
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterName
+		dataType: string
+		lineageTag: 3476982a-77ac-42fb-bb5b-d0dd109c7365
+		summarizeBy: none
+		sourceColumn: QuarterName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 76e35a8e-3de3-4aa7-90d4-6e4ae8249281
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: 4f33258f-3889-49ba-bb80-1bc5644b785e
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthShortName
+		dataType: string
+		lineageTag: 3c282da7-a673-4342-ab93-907bd0855f3b
+		summarizeBy: none
+		sourceColumn: MonthShortName
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		dataType: string
+		lineageTag: d1472a12-9e08-4ec8-8452-a95682281a41
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthKey
+		dataType: int64
+		formatString: 0
+		lineageTag: fd916da5-1a92-445e-b54b-2671a89e096b
+		summarizeBy: count
+		sourceColumn: YearMonthKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b1f34e73-3be5-464f-b6ea-b53c30b726c8
+		summarizeBy: none
+		sourceColumn: MonthStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MonthEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 261a25cc-a4e7-45c6-8a7f-b405a709b395
+		summarizeBy: none
+		sourceColumn: MonthEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 98abd26e-0b80-4769-ab2d-3e37249e8319
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 16229816-cdf7-4e5f-958a-737999a4055c
+		summarizeBy: sum
+		sourceColumn: DayOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		dataType: string
+		lineageTag: 1ba0e061-2a5f-4e42-9030-162d4f644a0a
+		summarizeBy: none
+		sourceColumn: DayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 502df2e4-7189-47d6-9322-b8dba447c1ac
+		summarizeBy: sum
+		sourceColumn: WeekOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISOWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 07f2681d-da29-44b9-a43f-6121f734b5ca
+		summarizeBy: sum
+		sourceColumn: ISOWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWeekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a3713a95-c2ee-4e4f-a2e8-e14c006b19d9
+		summarizeBy: none
+		sourceColumn: IsWeekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthYear = dimDate[MonthShortName] & " " & dimDate[Year]
+		lineageTag: 20d21927-4e4b-4547-9636-1ddd1df23dfb
+		summarizeBy: none
+		sortByColumn: YearMonth
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Year Hierarchy'
+		lineageTag: be8b9f8e-7cc4-4004-9a3c-521c1f562631
+
+		level Year
+			lineageTag: 2041222a-a209-4bc6-840c-923db6d35202
+			column: Year
+
+		level Quarter
+			lineageTag: db3c5643-de29-42df-8039-15382c38b5e1
+			column: Quarter
+
+		level MonthShortName
+			lineageTag: 6bb04f69-bf7c-4448-9829-dff7232873c2
+			column: MonthShortName
+
+		level Date
+			lineageTag: 1a2f2ced-7216-4db4-b1a9-c94f468af9c7
+			column: Date
+
+	partition dimDate = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "RevenueAnalytics"),
+				  #"Navigation 1" = Source{[Schema = "curated", Item = "dimDate"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
