@@ -1,25 +1,9 @@
-# Python
-__pycache__/
-*.py[cod]
-
 # Virtual Environment
 .venv/
-venv/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# VS Code
-.vscode/
-
-# PyCharm
-.idea/
-
-# Logs
-*.log
 
 # large data
 data/full_data
 
-# outtakes
+# other folders
 notebooks/outtakes.ipynb
+docs/
