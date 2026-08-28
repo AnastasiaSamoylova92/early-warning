@@ -1,0 +1,95 @@
+table factCosts
+	lineageTag: 36e9644c-f4a4-43e3-bdc5-63c138b47a10
+
+	column cost_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a6fed9d9-54f3-40ea-ad0c-250f1993896e
+		summarizeBy: none
+		sourceColumn: cost_id
+
+		annotation SummarizationSetBy = User
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b8300680-7789-47b6-ab93-b48a53932513
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column standard_unit_cost_eur
+		dataType: double
+		lineageTag: aff8d29e-4f3d-42d1-8c5d-7bb92a3a4a71
+		summarizeBy: sum
+		sourceColumn: standard_unit_cost_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_unit_cost_eur
+		dataType: double
+		lineageTag: 6ae06897-ecae-426a-991e-360e4a00e6e4
+		summarizeBy: sum
+		sourceColumn: actual_unit_cost_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cost_variance_eur
+		dataType: double
+		lineageTag: 15a63cf4-21ee-43bd-a378-b48598a102cd
+		summarizeBy: sum
+		sourceColumn: cost_variance_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cost_variance_pct
+		dataType: double
+		lineageTag: 0bb8dc73-41a3-4cd2-8ad2-bac104d9390f
+		summarizeBy: sum
+		sourceColumn: cost_variance_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b10331e-ffd4-4824-9dd1-c6b899a13189
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	partition factCosts = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(pSqlServer, pSqlDatabase),
+				    FactCosts = Source{[Schema = "staging", Item = "factCosts"]}[Data],
+				
+				    AddDateKey = Table.AddColumn(
+				        FactCosts,
+				        "DateKey",
+				        each Date.Year([year_month]) * 10000 + Date.Month([year_month]) * 100 + Date.Day([year_month]),
+				        Int64.Type
+				    ),
+				
+				    #"Removed Columns" = Table.RemoveColumns(
+				        AddDateKey,
+				        {"year_month"}
+				    )
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "9ecc7e9c6d22490c6503",
+  "position": {
+    "x": 148.51419031719533,
+    "y": 413.48914858096828,
+    "z": 14000,
+    "height": 306.644407345576,
+    "width": 438.06343906510853,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "factPipeline"
+                    }
+                  },
+                  "Property": "stage"
+                }
+              },
+              "queryRef": "factPipeline.stage",
+              "nativeQueryRef": "stage",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Weighted Pipeline Total"
+                }
+              },
+              "queryRef": "_Measures.Weighted Pipeline Total",
+              "nativeQueryRef": "Weighted Pipeline Total"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CRM Activity Minutes Total"
+                }
+              },
+              "queryRef": "_Measures.CRM Activity Minutes Total",
+              "nativeQueryRef": "CRM Activity Minutes Total",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Average Win Probability"
+                }
+              },
+              "queryRef": "_Measures.Average Win Probability",
+              "nativeQueryRef": "Average Win Probability"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'CRM ACTIVITY VS WIN PROBABILITY'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

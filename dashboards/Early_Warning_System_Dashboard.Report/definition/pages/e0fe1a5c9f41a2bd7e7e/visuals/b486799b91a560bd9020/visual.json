@@ -1,0 +1,1249 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "b486799b91a560bd9020",
+  "position": {
+    "x": 693.63636363636363,
+    "y": 436.36363636363632,
+    "z": 4000,
+    "height": 278.18181818181819,
+    "width": 586.36363636363626,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimCustomer"
+                    }
+                  },
+                  "Property": "customer_segment"
+                }
+              },
+              "queryRef": "dimCustomer.customer_segment",
+              "nativeQueryRef": "Segment",
+              "active": true,
+              "displayName": "Segment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimCustomer"
+                    }
+                  },
+                  "Property": "industry"
+                }
+              },
+              "queryRef": "dimCustomer.industry",
+              "nativeQueryRef": "Industry",
+              "active": true,
+              "displayName": "Industry"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Customers Active"
+                }
+              },
+              "queryRef": "_Measures.Customers Active",
+              "nativeQueryRef": "# Customers",
+              "displayName": "# Customers"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Revenue"
+                }
+              },
+              "queryRef": "_Measures.Revenue",
+              "nativeQueryRef": "Revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Revenue per Customer"
+                }
+              },
+              "queryRef": "_Measures.Revenue per Customer",
+              "nativeQueryRef": "Revenue per Customer",
+              "displayName": "Revenue per Customer"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "NRR %"
+                }
+              },
+              "queryRef": "_Measures.NRR %",
+              "nativeQueryRef": "NRR",
+              "displayName": "NRR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Customers AVG Churn Prob"
+                }
+              },
+              "queryRef": "_Measures.Customers AVG Churn Prob",
+              "nativeQueryRef": "Churn Risk",
+              "displayName": "Churn Risk"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dimCustomer.customer_segment"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dimCustomer.industry"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Customers Active"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.10467706013364D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Revenue per Customer"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.17762321091348D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.NRR %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120.0730828026207D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dimCustomer.customer_segment"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "67.04663666456413D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Revenue"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69.10077734577726D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Customers AVG Churn Prob"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'fixedWidth'"
+                }
+              }
+            },
+            "defaultColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "_Measures"
+                                    }
+                                  },
+                                  "Property": "NRR %"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0.95D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#C53D3D'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "And": {
+                              "Left": {
+                                "Comparison": {
+                                  "ComparisonKind": 2,
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "_Measures"
+                                        }
+                                      },
+                                      "Property": "NRR %"
+                                    }
+                                  },
+                                  "Right": {
+                                    "RangePercent": {
+                                      "Min": {
+                                        "ScopedEval": {
+                                          "Expression": {
+                                            "Aggregation": {
+                                              "Expression": {
+                                                "ScopedEval": {
+                                                  "Expression": {
+                                                    "Measure": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "_Measures"
+                                                        }
+                                                      },
+                                                      "Property": "NRR %"
+                                                    }
+                                                  },
+                                                  "Scope": [
+                                                    {
+                                                      "AllRolesRef": {}
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "Function": 3
+                                            }
+                                          },
+                                          "Scope": []
+                                        }
+                                      },
+                                      "Max": {
+                                        "ScopedEval": {
+                                          "Expression": {
+                                            "Aggregation": {
+                                              "Expression": {
+                                                "ScopedEval": {
+                                                  "Expression": {
+                                                    "Measure": {
+                                                      "Expression": {
+                                                        "SourceRef": {
+                                                          "Entity": "_Measures"
+                                                        }
+                                                      },
+                                                      "Property": "NRR %"
+                                                    }
+                                                  },
+                                                  "Scope": [
+                                                    {
+                                                      "AllRolesRef": {}
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "Function": 4
+                                            }
+                                          },
+                                          "Scope": []
+                                        }
+                                      },
+                                      "Percent": 0.0095
+                                    }
+                                  }
+                                }
+                              },
+                              "Right": {
+                                "Comparison": {
+                                  "ComparisonKind": 3,
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "_Measures"
+                                        }
+                                      },
+                                      "Property": "NRR %"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "1D"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#D99A2B'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 2,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "_Measures"
+                                    }
+                                  },
+                                  "Property": "NRR %"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "1D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#2F855A'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures.NRR %"
+          }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Before'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "Customers AVG Churn Prob"
+                              }
+                            },
+                            "Right": {
+                              "RangePercent": {
+                                "Min": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "_Measures"
+                                                  }
+                                                },
+                                                "Property": "Customers AVG Churn Prob"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 3
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Max": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "_Measures"
+                                                  }
+                                                },
+                                                "Property": "Customers AVG Churn Prob"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 4
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Percent": 0.67
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'SymbolLow'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 2,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "_Measures"
+                                      }
+                                    },
+                                    "Property": "Customers AVG Churn Prob"
+                                  }
+                                },
+                                "Right": {
+                                  "RangePercent": {
+                                    "Min": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "_Measures"
+                                                      }
+                                                    },
+                                                    "Property": "Customers AVG Churn Prob"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 3
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Max": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "_Measures"
+                                                      }
+                                                    },
+                                                    "Property": "Customers AVG Churn Prob"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 4
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Percent": 0.33
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 3,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "_Measures"
+                                      }
+                                    },
+                                    "Property": "Customers AVG Churn Prob"
+                                  }
+                                },
+                                "Right": {
+                                  "RangePercent": {
+                                    "Min": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "_Measures"
+                                                      }
+                                                    },
+                                                    "Property": "Customers AVG Churn Prob"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 3
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Max": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "_Measures"
+                                                      }
+                                                    },
+                                                    "Property": "Customers AVG Churn Prob"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 4
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Percent": 0.67
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'SymbolMedium'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "Customers AVG Churn Prob"
+                              }
+                            },
+                            "Right": {
+                              "RangePercent": {
+                                "Min": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "_Measures"
+                                                  }
+                                                },
+                                                "Property": "Customers AVG Churn Prob"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 3
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Max": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "_Measures"
+                                                  }
+                                                },
+                                                "Property": "Customers AVG Churn Prob"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 4
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Percent": 0.33
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'SymbolHigh'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures.Customers AVG Churn Prob"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Customers Active"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Revenue"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Revenue per Customer"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.NRR %"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Customers AVG Churn Prob"
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabular'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SEGMENT SCORECARD'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bd83677e2807dbb96ba5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimPvmWaterfallCategories"
+              }
+            },
+            "Property": "Category"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "698ecbd72e4a28700779",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimCustomer"
+              }
+            },
+            "Property": "customer_segment"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f7e6922217b8220fedbb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimCustomer"
+              }
+            },
+            "Property": "industry"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1bd2fd5decbd2954c5bc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Customers Active"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8ad8fbf9085a339631a1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Revenue"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e3970c475e9f04256fdd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Revenue per Customer"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "33e8b0667b4f2c01c87b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "NRR %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

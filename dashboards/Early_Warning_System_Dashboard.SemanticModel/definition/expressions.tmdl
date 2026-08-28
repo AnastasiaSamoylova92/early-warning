@@ -1,0 +1,21 @@
+expression pEarlyWarningRoot = "C:\Benutzer\Anastasia\Lokale Daten\AS Portfolio\early-warning" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: dc7cdf8b-51e6-4649-b048-bef8ce6872f0
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression pSqlServer = "localhost" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 1d1951d9-7a67-4183-9722-7c5ff749c73f
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression pSqlDatabase = "RevenueAnalytics" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: ab402180-0935-47d0-92b1-a4577318956d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

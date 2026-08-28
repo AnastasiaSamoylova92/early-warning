@@ -1,0 +1,45 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-DE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["factSales","dimCustomer","dimProduct","dimSalesRep","factCosts","factCRMActivities","factForecast","factInventory","factPipeline","factReturns","dimRegion","dimDate","factMlPredictions","factMarketActivities","factMarketSignals","dimFeatureImportance","dimFalseAlarmRecallTradeoff","dimFeatureImportanceFamily","pEarlyWarningRoot","pSqlServer","pSqlDatabase"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_bf785b4d-584e-4dfa-914f-f20cd192e0b6
+ref table factSales
+ref table dimCustomer
+ref table LocalDateTable_0ecb0214-7246-4241-9141-1f64249e7d0c
+ref table dimProduct
+ref table dimSalesRep
+ref table factCosts
+ref table factCRMActivities
+ref table factForecast
+ref table factInventory
+ref table factPipeline
+ref table LocalDateTable_44d8304e-8a23-4708-aa9e-e6886340105f
+ref table factReturns
+ref table dimRegion
+ref table dimDate
+ref table _Measures
+ref table dimPvmWaterfallCategories
+ref table factMlPredictions
+ref table LocalDateTable_14fd7077-36b9-42ce-83f6-1e6efbc5d2f8
+ref table factMarketActivities
+ref table factMarketSignals
+ref table dimFeatureImportance
+ref table dimFalseAlarmRecallTradeoff
+ref table factPipelineRunMetadata
+ref table LocalDateTable_54756f1a-bb7c-49e0-b4fa-5858dfdc0430
+ref table LocalDateTable_bbc6488b-0e14-40bc-b31c-967d45cd25e7
+ref table LocalDateTable_f04d3cc4-c78d-499e-b32e-b2c5e0e3440b
+ref table dimFeatureImportanceFamily
+
+ref cultureInfo en-US
+

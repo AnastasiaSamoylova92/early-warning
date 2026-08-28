@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "eae5209b55047755dac1",
+  "position": {
+    "x": 131.87244480784955,
+    "y": 153.85118560915782,
+    "z": 5000,
+    "height": 292.00327064595257,
+    "width": 668.78168438266562,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+    "query": {
+      "queryState": {
+        "content": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual vs Forecast Versions HTML"
+                }
+              },
+              "queryRef": "_Measures.Actual vs Forecast Versions HTML",
+              "nativeQueryRef": "Actual vs Forecast Versions HTML"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6bd2c2c12d20582c49b1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Actual vs Forecast Versions HTML"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

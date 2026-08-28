@@ -1,0 +1,301 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "cf924d747c1800a51d5e",
+  "position": {
+    "x": 3.6363636363636362,
+    "y": 499,
+    "z": 12000,
+    "height": 60,
+    "width": 126.44376899696049,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimProduct"
+                    }
+                  },
+                  "Property": "product_family"
+                }
+              },
+              "queryRef": "dimProduct.product_family",
+              "nativeQueryRef": "product_family",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimProduct"
+                    }
+                  },
+                  "Property": "product_id"
+                }
+              },
+              "queryRef": "dimProduct.product_id",
+              "nativeQueryRef": "product_id",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimProduct"
+                    }
+                  },
+                  "Property": "product_name"
+                }
+              },
+              "queryRef": "dimProduct.product_name",
+              "nativeQueryRef": "product_name",
+              "active": false
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dimProduct.product_family"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimProduct"
+                    }
+                  },
+                  "Property": "product_family"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dimProduct.product_id"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dimProduct.product_name"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Accessories'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PRODUCT'"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "padding": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#ffffff'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PRODUCT'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "syncGroup": {
+      "groupName": "product_family1",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

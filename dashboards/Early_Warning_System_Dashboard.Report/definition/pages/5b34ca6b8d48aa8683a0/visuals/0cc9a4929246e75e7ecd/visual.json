@@ -1,0 +1,568 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "0cc9a4929246e75e7ecd",
+  "position": {
+    "x": 801.29380053908358,
+    "y": 157.84366576819406,
+    "z": 7000,
+    "height": 251.8598382749326,
+    "width": 459.73045822102426,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimProduct"
+                    }
+                  },
+                  "Property": "product_family"
+                }
+              },
+              "queryRef": "dimProduct.product_family",
+              "nativeQueryRef": "product_family",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimRegion"
+                    }
+                  },
+                  "Property": "region"
+                }
+              },
+              "queryRef": "dimRegion.region",
+              "nativeQueryRef": "Region",
+              "active": true,
+              "displayName": "Region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimRegion"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "dimRegion.country",
+              "nativeQueryRef": "Country",
+              "active": true,
+              "displayName": "Country"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Revenue FC Accuracy %"
+                }
+              },
+              "queryRef": "_Measures.Revenue FC Accuracy %",
+              "nativeQueryRef": "Revenue FC Accuracy %"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dimRegion.region"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dimRegion.country"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#282821'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "_Measures"
+                            }
+                          },
+                          "Property": "Revenue FC Accuracy %"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient3": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#D99A2B'"
+                              }
+                            }
+                          },
+                          "mid": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#accebd'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#2F855A'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures.Revenue FC Accuracy %"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'fixedWidth'"
+                }
+              }
+            },
+            "defaultColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabular'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "null"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Revenue FC Accuracy %"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69.47041913429204D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dimRegion.country"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.69138061180693D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dimRegion.region"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Revenue FC Accuracy %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.0909090909091D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dimProduct"
+                          }
+                        },
+                        "Property": "product_family"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Accessories'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'REGIONAL FORECAST ACCURACY'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "953de16c12a50b373663",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimRegion"
+              }
+            },
+            "Property": "country"
+          }
+        },
+        "type": "Categorical",
+        "isHiddenInViewMode": true,
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
