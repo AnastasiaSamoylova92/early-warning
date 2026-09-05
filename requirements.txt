@@ -5,6 +5,11 @@ seaborn==0.13.2
 SQLAlchemy==2.0.40
 pyodbc==5.1.0
 openpyxl==3.1.5
-faker==30.8.2
 jupyter==1.1.1
 notebook==7.3.2
+python== 3.13.2
+scikit-learn == 1.6.1
+joblib == 1.4.2
+ipython == 9.0.2
+duckdb == 1.5.5
+pytest == 9.1.1
