@@ -1,0 +1,229 @@
+rank,feature,importance,cumulative_importance,feature_family
+1,customers_lag_1m,0.0382828554529179,0.0382828554529179,Risk and trend
+2,trend_slope_3m,0.0333357882624267,0.0716186437153447,Risk and trend
+3,unit_share_lag_1m,0.0329517073229472,0.1045703510382919,Risk and trend
+4,units_lag_1m,0.0322031453397659,0.1367734963780578,Risk and trend
+5,revenue_lag_1m,0.0321151153927511,0.168888611770809,Risk and trend
+6,customer_share_category_region,0.0314670885725968,0.2003557003434058,Customer
+7,volatility_3m,0.0299411428420804,0.2302968431854863,Risk and trend
+8,revenue_volatility_3m,0.0287380994379587,0.259034942623445,Risk and trend
+9,revenue,0.0252391382196552,0.2842740808431003,Profitability
+10,units_sold,0.0245497406422254,0.3088238214853258,Other
+11,rolling_revenue_mean_3m,0.0243717706361709,0.3331955921214967,Risk and trend
+12,units_lag_3m,0.0243455037851431,0.3575410959066398,Risk and trend
+13,rolling_units_std_3m,0.024134497787758,0.3816755936943979,Risk and trend
+14,revenue_at_risk_proxy,0.0234775267597411,0.405153120454139,Profitability
+15,mom_units_growth_pct,0.0224508128763879,0.4276039333305269,Other
+16,rolling_revenue_std_3m,0.0216042717626642,0.4492082050931912,Risk and trend
+17,rolling_units_mean_3m,0.0215238439801207,0.470732049073312,Risk and trend
+18,cogs_eur,0.0211946753264075,0.4919267243997195,Profitability
+19,product_unit_share_category_region,0.0195792170614616,0.5115059414611811,Market and competition
+20,product_revenue_share_category_region,0.0185892740617295,0.5300952155229106,Profitability
+21,risk_factor_volatility,0.0165135819598972,0.5466087974828079,Risk and trend
+22,revenue_vs_lag_1m_pct,0.016425634130383,0.563034431613191,Risk and trend
+23,customer_count_growth_pct,0.0163113155077366,0.5793457471209277,Customer
+24,order_count,0.015961823739427,0.5953075708603547,Other
+25,unit_share_change_pct,0.0152915029387974,0.6105990737991521,Other
+26,discount_value_eur,0.0151296911167517,0.6257287649159039,Profitability
+27,covered_annual_quota_eur,0.0143143968489544,0.6400431617648584,Sales organization
+28,gross_profit_growth_pct,0.0142857625549951,0.6543289243198536,Profitability
+29,unique_customers,0.0135811702645203,0.6679100945843739,Customer
+30,units_vs_6m_avg_pct,0.0123182460266401,0.6802283406110141,Other
+31,revenue_percentile_category_region,0.0120804962571391,0.6923088368681533,Profitability
+32,rolling_units_mean_6m,0.0112244558364759,0.7035332927046292,Risk and trend
+33,trend_slope_6m,0.0107991276254625,0.7143324203300917,Risk and trend
+34,no_sales_flag,0.0106804917672321,0.7250129120973239,Risk and trend
+35,commercial_pressure_score,0.0105729068458449,0.7355858189431689,Other
+36,rolling_units_cv_6m,0.0104488371261553,0.7460346560693242,Risk and trend
+37,active_sales_reps,0.010296982865281,0.7563316389346052,Sales organization
+38,units_acceleration_3m,0.0094745155154031,0.7658061544500083,Risk and trend
+39,risk_factor_under_trend,0.0082252205843329,0.7740313750343413,Risk and trend
+40,inventory_months_cover,0.0081474312284799,0.7821788062628212,Supply and returns
+41,avg_customer_churn_probability_lag_1m,0.0075521187253417,0.789730924988163,Risk and trend
+42,crm_activity_minutes,0.0067218301053718,0.7964527550935349,Sales organization
+43,crm_activity_count,0.0066458361396794,0.8030985912332144,Sales organization
+44,estimated_gross_profit,0.006539814147144,0.8096384053803585,Profitability
+45,avg_customer_size_score_lag_1m,0.0060940190644385,0.815732424444797,Risk and trend
+46,category_region_customers,0.0054277390239468,0.8211601634687438,Customer
+47,product_age_months,0.0051822357296884,0.8263423991984322,Product and lifecycle
+48,risk_factor_customer_drop,0.0045691987909461,0.8309115979893784,Risk and trend
+49,unit_rank_category_region,0.0042540117943752,0.8351656097837536,Market and competition
+50,category_region_units_2,0.0041896562493364,0.8393552660330901,Market and competition
+51,gross_profit_eur,0.0041491860834066,0.8435044521164967,Profitability
+52,pipeline_value_per_customer,0.0040608109482356,0.8475652630647323,Customer
+53,crm_demo_like_count,0.0040354321985618,0.8516006952632942,Marketing and digital
+54,margin_gap_vs_target,0.0039133849269383,0.8555140801902326,Profitability
+55,estimated_gross_margin_pct,0.0030331394097746,0.8585472196000072,Profitability
+56,actual_margin_gap_vs_target,0.002800074633143,0.8613472942331503,Profitability
+57,regional_crm_activity_index,0.0027760337244938,0.8641233279576441,Sales organization
+58,production_units,0.0026411738740402,0.8667645018316843,Supply and returns
+59,Month,0.0025914242139428,0.8693559260456272,Other
+60,inventory_turnover_proxy,0.002570613542716,0.8719265395883432,Supply and returns
+61,avg_discount_pct,0.0025238852322618,0.8744504248206051,Profitability
+62,avg_customer_churn_probability,0.0025057345206604,0.8769561593412655,Customer
+63,category_region_revenue,0.0023653558929133,0.8793215152341788,Profitability
+64,avg_order_units,0.0023458257739147,0.8816673410080935,Other
+65,avg_customer_size_score,0.0023305304218612,0.8839978714299548,Customer
+66,digital_interest_per_unit,0.0022728574605088,0.8862707288904637,Marketing and digital
+67,cost_variance_pct,0.0022393352011026,0.8885100640915663,Profitability
+68,page_view_to_visit_ratio,0.002235008606173,0.8907450726977393,Marketing and digital
+69,website_visits_growth_pct,0.0021952523080406,0.8929403250057799,Marketing and digital
+70,category_region_avg_discount,0.002191022653496,0.8951313476592759,Profitability
+71,activity_pipeline_interest_index,0.0021612744827535,0.8972926221420294,Sales organization
+72,opening_stock_units,0.0021593964552729,0.8994520185973024,Supply and returns
+73,supply_coverage_ratio,0.0021534734751369,0.9016054920724392,Supply and returns
+74,expected_pipeline_eur,0.0021467423391663,0.9037522344116056,Sales organization
+75,weighted_pipeline_eur,0.0021115455243108,0.9058637799359166,Sales organization
+76,avg_days_to_close,0.0020948851769109,0.9079586651128276,Other
+77,cost_variance_eur,0.0020306515202729,0.9099893166331005,Profitability
+78,inventory_value_eur,0.0020247232508795,0.91201403988398,Supply and returns
+79,ending_stock_units,0.0020240089650583,0.9140380488490384,Supply and returns
+80,avg_order_revenue,0.0020228277338434,0.9160608765828816,Profitability
+81,avg_base_churn_probability,0.0019940360745996,0.9180549126574812,Customer
+82,product_page_views,0.0019897834774542,0.9200446961349356,Marketing and digital
+83,actual_vs_estimated_margin_gap,0.001984129103013,0.9220288252379488,Profitability
+84,website_visits,0.0019728755261327,0.9240017007640814,Marketing and digital
+85,avg_win_probability,0.0019512066420395,0.9259529074061208,Other
+86,standard_unit_cost_eur,0.0018656394761769,0.9278185468822978,Profitability
+87,mql_conversion_rate,0.0018632458983901,0.929681792780688,Other
+88,avg_customer_health_score,0.0018599610230714,0.9315417538037596,Customer
+89,cost_variance_to_revenue,0.0018477604194407,0.9333895142232004,Profitability
+90,demo_conversion_rate,0.0018455325684343,0.9352350467916346,Marketing and digital
+91,avg_sentiment_score,0.001837862941219,0.9370729097328536,Other
+92,weighted_pipeline_growth_pct,0.0018314892330122,0.938904398965866,Sales organization
+93,actual_unit_cost_eur,0.0018249473811264,0.9407293463469922,Profitability
+94,discount_vs_category_region,0.0018114451760657,0.942540791523058,Profitability
+95,stock_change_units,0.0016748995772124,0.9442156911002704,Supply and returns
+96,production_to_sales_ratio,0.0016554579498423,0.9458711490501128,Supply and returns
+97,demo_requests_growth_pct,0.001630722496377,0.9475018715464896,Marketing and digital
+98,base_unit_cost_eur,0.0015982761928333,0.949100147739323,Profitability
+99,base_list_price_eur,0.0015747631920516,0.9506749109313748,Other
+100,ending_stock_to_sales_ratio,0.0015139777065763,0.9521888886379511,Supply and returns
+101,gross_margin_pct,0.0015069466514768,0.953695835289428,Profitability
+102,gross_profit_per_unit,0.0014327619933804,0.9551285972828084,Profitability
+103,avg_asp_eur,0.0014320731340444,0.9565606704168528,Profitability
+104,margin_factor,0.001371149350172,0.9579318197670248,Profitability
+105,pipeline_opportunities,0.0013564072278193,0.9592882269948444,Sales organization
+106,campaign_spend_rolling_3m,0.0012870332886313,0.9605752602834756,Risk and trend
+107,engagement_to_pipeline_ratio,0.0012855508914407,0.9618608111749164,Sales organization
+108,lifecycle_stage_num,0.0012295811257046,0.9630903923006208,Product and lifecycle
+109,marketing_qualified_leads,0.001194625837234,0.9642850181378548,Market and competition
+110,category_region_product_count,0.0011789430257013,0.9654639611635564,Market and competition
+111,Year,0.0011449259210795,0.9666088870846358,Other
+112,demo_requests,0.0010755560750016,0.9676844431596374,Marketing and digital
+113,is_declining_product,0.0010225189707694,0.9687069621304067,Product and lifecycle
+114,lifecycle_stage__Decline,0.0009905204719832,0.96969748260239,Product and lifecycle
+115,is_decline_stage,0.0009715835316105,0.9706690661340006,Other
+116,market_growth_factor,0.0009199653182234,0.971589031452224,Market and competition
+117,distributor_order_share_lag_1m,0.0009152221157973,0.9725042535680214,Risk and trend
+118,product_growth_factor,0.0007729754434174,0.9732772290114388,Product and lifecycle
+119,Quarter,0.0007649626840394,0.9740421916954782,Other
+120,market_demand_change_pct,0.0007279004638482,0.9747700921593264,Market and competition
+121,target_margin_pct,0.0007226514472105,0.975492743606537,Profitability
+122,market_growth_pct,0.0006461912581315,0.9761389348646686,Market and competition
+123,dominant_rep_seniority__Professional,0.0006425052073056,0.9767814400719744,Other
+124,competitor_pressure_change_pct,0.0006355504867299,0.9774169905587042,Market and competition
+125,market_tailwind_score,0.0006316435989346,0.9780486341576388,Market and competition
+126,marketing_efficiency_score,0.0006279901185349,0.978676624276174,Market and competition
+127,demand_competition_ratio,0.0005976978456113,0.9792743221217852,Other
+128,competitor_pressure_index,0.0005903056233462,0.9798646277451316,Market and competition
+129,campaign_spend_lag_1m,0.0005795999673391,0.9804442277124706,Risk and trend
+130,supply_pressure_index,0.0005751054693482,0.9810193331818188,Supply and returns
+131,supply_pressure_change_pct,0.0005669466424436,0.9815862798242624,Supply and returns
+132,click_to_mql_rate,0.0005600543664903,0.9821463341907528,Marketing and digital
+133,market_pipeline_interest_index,0.000554129736044,0.9827004639267968,Market and competition
+134,market_opportunity_change_pct,0.0005531136968415,0.9832535776236384,Market and competition
+135,demand_supply_gap,0.0005412360069065,0.983794813630545,Supply and returns
+136,campaign_ctr_pct,0.000531153328885,0.98432596695943,Marketing and digital
+137,macro_business_index,0.0005285528197375,0.9848545197791676,Region and macro
+138,cost_per_lead_eur,0.0005106608934749,0.9853651806726428,Profitability
+139,market_demand_index,0.0004903170050471,0.98585549767769,Market and competition
+140,market_opportunity_score,0.000486022028114,0.986341519705804,Market and competition
+141,supply_pressure_score,0.000470445892378,0.986811965598182,Supply and returns
+142,macro_business_index_pct,0.0004669374897085,0.9872789030878903,Region and macro
+143,churn_risk_customer_share_lag_1m,0.0004609404045548,0.9877398434924451,Risk and trend
+144,campaign_spend_per_demo,0.0004535868624859,0.9881934303549312,Marketing and digital
+145,pipeline_conversion_rate,0.0004529759557407,0.988646406310672,Sales organization
+146,dominant_order_size_category__Medium Order,0.0004411067536339,0.989087513064306,Customer
+147,campaign_spend_per_visit,0.0004368401208111,0.9895243531851172,Marketing and digital
+148,campaign_impressions,0.0004177087737449,0.989942061958862,Marketing and digital
+149,campaign_clicks,0.0003883239175441,0.9903303858764062,Marketing and digital
+150,campaign_spend_eur,0.0003768046035727,0.9907071904799788,Marketing and digital
+151,risk_factor_sales_drop,0.000376060790567,0.991083251270546,Risk and trend
+152,seasonality_adjusted_units,0.0003738035809131,0.991457054851459,Other
+153,distributor_order_share,0.0003548800901005,0.9918119349415596,Customer
+154,regional_market_growth_factor,0.0003513378100628,0.9921632727516224,Market and competition
+155,consec_drop_3m,0.0003166719201204,0.9924799446717428,Other
+156,churn_risk_customer_share,0.0003129915386107,0.9927929362103536,Customer
+157,closed_won_count,0.0003101703592414,0.993103106569595,Other
+158,dominant_margin_category__Low Margin,0.0003082569759268,0.9934113635455218,Profitability
+159,lifecycle_stage__Mature,0.0002906756211667,0.9937020391666884,Product and lifecycle
+160,closed_lost_count,0.0002586109064198,0.9939606500731084,Other
+161,is_growth_stage,0.0002585265413299,0.9942191766144384,Other
+162,is_mature_product,0.0002313195600185,0.9944504961744568,Product and lifecycle
+163,lifecycle_stage__Growth,0.000212542894022,0.994663039068479,Product and lifecycle
+164,dominant_order_size_category__Small Order,0.0002124853454265,0.9948755244139056,Customer
+165,region__Western EU,0.0002113411606091,0.9950868655745146,Region and macro
+166,region__Northern EU,0.0002011478726832,0.995288013447198,Region and macro
+167,campaign_active_with_no_sales,0.0001964073575966,0.9954844208047944,Marketing and digital
+168,fx_to_eur,0.0001917849966345,0.995676205801429,Region and macro
+169,enterprise_customer_count,0.0001906841435009,0.99586688994493,Customer
+170,region__Southern EU,0.0001800510857853,0.9960469410307152,Region and macro
+171,dominant_rep_seniority__Key Account,0.0001682357105509,0.9962151767412664,Other
+172,product_line__IT,0.0001649700792167,0.996380146820483,Product and lifecycle
+173,region__Eastern EU,0.0001608452448655,0.9965409920653486,Region and macro
+174,dominant_rep_seniority__Senior,0.0001570648751406,0.9966980569404892,Other
+175,return_value_eur,0.0001507197684143,0.9968487767089036,Supply and returns
+176,dominant_rep_seniority__Junior,0.0001473463578474,0.9969961230667512,Other
+177,product_line__Medical,0.0001454090246182,0.9971415320913696,Product and lifecycle
+178,product_line__Accessories,0.0001429952949648,0.9972845273863344,Product and lifecycle
+179,dominant_margin_category__Medium Margin,0.0001380579131234,0.9974225852994578,Profitability
+180,return_units,0.0001337255927654,0.9975563108922232,Supply and returns
+181,return_pressure_score,0.0001327615708248,0.997689072463048,Supply and returns
+182,high_churn_customer_count,0.0001316650243387,0.9978207374873868,Customer
+183,product_category__Legacy Workstation,0.0001252623926185,0.9979459998800054,Product and lifecycle
+184,return_value_rate,0.0001231246573903,0.9980691245373958,Supply and returns
+185,product_line__Services,0.0001229480897645,0.9981920726271604,Product and lifecycle
+186,product_category__Medical Sensor,0.00012024893451,0.9983123215616704,Product and lifecycle
+187,seasonality_index,0.0001198339817955,0.998432155543466,Other
+188,product_category__Laptop Standard,0.0001164858279415,0.9985486413714074,Product and lifecycle
+189,return_rate_units,0.0001149364811193,0.9986635778525268,Supply and returns
+190,product_category__Connectivity Module,0.0001136617656766,0.9987772396182034,Product and lifecycle
+191,product_category__Laptop Pro,0.0001124818822905,0.998889721500494,Product and lifecycle
+192,product_category__Tablet Enterprise,0.0001032511470823,0.9989929726475762,Product and lifecycle
+193,product_category__Monitoring Device,0.0001011225150784,0.9990940951626548,Product and lifecycle
+194,product_category__Industrial Scanner,7.205108685926181e-05,0.999166146249514,Product and lifecycle
+195,campaign_flag,7.11349153518281e-05,0.9992372811648658,Risk and trend
+196,campaign_channel__Partner,6.43542416864356e-05,0.999301635406552,Marketing and digital
+197,campaign_channel__No Active Campaign,6.422700024501911e-05,0.9993658624067971,Marketing and digital
+198,campaign_channel__Email,6.13108141244311e-05,0.9994271732209216,Marketing and digital
+199,dominant_margin_category__High Margin,6.098042997967052e-05,0.9994881536509012,Profitability
+200,product_category__Service Contract,5.868632835770037e-05,0.999546839979259,Product and lifecycle
+201,campaign_channel__Paid Search,5.555373893638892e-05,0.9996023937181954,Marketing and digital
+202,return_count,5.547935642839145e-05,0.9996578730746236,Supply and returns
+203,product_category__Accessory Kit,5.387305020365565e-05,0.9997117461248274,Product and lifecycle
+204,dominant_order_size_category__Large Order,4.905034692964284e-05,0.999760796471757,Customer
+205,campaign_channel__Webinar,4.878553661706645e-05,0.999809582008374,Marketing and digital
+206,campaign_channel__Content,4.0367066514952015e-05,0.999849949074889,Marketing and digital
+207,campaign_channel__Trade Fair,3.409673432870482e-05,0.9998840458092176,Marketing and digital
+208,weak_market_flag,2.2486354536438267e-05,0.999906532163754,Risk and trend
+209,is_new_product,1.972047712300141e-05,0.9999262526408772,Product and lifecycle
+210,dominant_rep_seniority__Unknown,1.954243568304907e-05,0.99994579507656,Other
+211,high_competition_flag,1.7325517835211656e-05,0.9999631205943952,Risk and trend
+212,lifecycle_stage__New,1.562482401259128e-05,0.999978745418408,Product and lifecycle
+213,outlier_order_count,1.329854783119046e-05,0.9999920439662392,Other
+214,stockout_with_demand_flag,3.009193363659723e-06,0.9999950531596028,Risk and trend
+215,zero_stock_flag,2.8499303300591366e-06,0.9999979030899327,Risk and trend
+216,return_rate_change_pct,1.3506996651970044e-06,0.999999253789598,Supply and returns
+217,stockout_flag,7.46210401389479e-07,0.9999999999999994,Risk and trend
+218,product_line____UNSEEN__,0.0,0.9999999999999994,Product and lifecycle
+219,product_category____UNSEEN__,0.0,0.9999999999999994,Product and lifecycle
+220,demand_supply_mismatch_flag,0.0,0.9999999999999994,Risk and trend
+221,dominant_rep_seniority____UNSEEN__,0.0,0.9999999999999994,Other
+222,backorder_units,0.0,0.9999999999999994,Supply and returns
+223,region____UNSEEN__,0.0,0.9999999999999994,Region and macro
+224,dominant_order_size_category____UNSEEN__,0.0,0.9999999999999994,Customer
+225,dominant_margin_category____UNSEEN__,0.0,0.9999999999999994,Profitability
+226,backorder_rate,0.0,0.9999999999999994,Supply and returns
+227,lifecycle_stage____UNSEEN__,0.0,0.9999999999999994,Product and lifecycle
+228,campaign_channel____UNSEEN__,0.0,0.9999999999999994,Marketing and digital

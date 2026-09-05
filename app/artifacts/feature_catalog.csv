@@ -1,0 +1,189 @@
+feature,feature_family,feature_type,timing,missing_rate,engineered_in_this_notebook,leakage_status,included_in_model
+avg_customer_churn_probability,customer mix,numeric,current month available at prediction time,0.4056,True,ok,True
+avg_customer_churn_probability_lag_1m,customer mix,numeric,current vs prior / prior-only history,0.4213,True,ok,True
+avg_customer_size_score,customer mix,numeric,current month available at prediction time,0.4056,False,ok,True
+avg_customer_size_score_lag_1m,customer mix,numeric,current vs prior / prior-only history,0.4213,True,ok,True
+avg_order_revenue,customer mix,numeric,current month available at prediction time,0.4056,True,ok,True
+avg_order_units,customer mix,numeric,current month available at prediction time,0.4056,True,ok,True
+distributor_order_share,customer mix,numeric,current month available at prediction time,0.4056,True,ok,True
+distributor_order_share_lag_1m,customer mix,numeric,current vs prior / prior-only history,0.4213,True,ok,True
+Month,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+Quarter,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+Year,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+active_sales_reps,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+activity_pipeline_interest_index,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+avg_asp_eur,existing preprocessed feature,numeric,current month available at prediction time,0.4056,False,ok,True
+avg_base_churn_probability,existing preprocessed feature,numeric,current month available at prediction time,0.4056,False,ok,True
+avg_customer_health_score,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+avg_days_to_close,existing preprocessed feature,numeric,current month available at prediction time,0.1542,False,ok,True
+avg_discount_pct,existing preprocessed feature,numeric,current month available at prediction time,0.4078,False,ok,True
+avg_sentiment_score,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+avg_win_probability,existing preprocessed feature,numeric,current month available at prediction time,0.1542,False,ok,True
+base_list_price_eur,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+closed_lost_count,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+closed_won_count,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+cogs_eur,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+consec_drop_3m,existing preprocessed feature,binary,current month available at prediction time,0.079,False,ok,True
+covered_annual_quota_eur,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+crm_activity_count,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+crm_activity_minutes,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+customers_lag_1m,existing preprocessed feature,numeric,current vs prior / prior-only history,0.0197,False,ok,True
+discount_value_eur,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+dominant_order_size_category,existing preprocessed feature,categorical,current month available at prediction time,0.4056,False,ok,True
+dominant_rep_seniority,existing preprocessed feature,categorical,current month available at prediction time,0.4056,False,ok,True
+enterprise_customer_count,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+expected_pipeline_eur,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+fx_to_eur,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+high_churn_customer_count,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+high_competition_flag,existing preprocessed feature,binary,current month available at prediction time,0.7998,True,ok,True
+is_decline_stage,existing preprocessed feature,binary,current month available at prediction time,0.0,True,ok,True
+is_declining_product,existing preprocessed feature,binary,current month available at prediction time,0.0,False,ok,True
+is_mature_product,existing preprocessed feature,binary,current month available at prediction time,0.0,True,ok,True
+is_new_product,existing preprocessed feature,binary,current month available at prediction time,0.0,False,ok,True
+marketing_qualified_leads,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+no_sales_flag,existing preprocessed feature,binary,current month available at prediction time,0.0,False,ok,True
+order_count,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+outlier_order_count,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+pipeline_conversion_rate,existing preprocessed feature,numeric,current month available at prediction time,0.584,False,ok,True
+pipeline_opportunities,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+product_category,existing preprocessed feature,categorical,static/current dimension,0.0,False,ok,True
+product_line,existing preprocessed feature,categorical,static/current dimension,0.0,False,ok,True
+region,existing preprocessed feature,categorical,static/current dimension,0.0,False,ok,True
+regional_crm_activity_index,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+revenue,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+revenue_lag_1m,existing preprocessed feature,numeric,current vs prior / prior-only history,0.0197,False,ok,True
+risk_factor_customer_drop,existing preprocessed feature,binary,current month available at prediction time,0.0,False,ok,True
+risk_factor_sales_drop,existing preprocessed feature,binary,current month available at prediction time,0.0,False,ok,True
+risk_factor_under_trend,existing preprocessed feature,binary,current month available at prediction time,0.0,False,ok,True
+trend_slope_3m,existing preprocessed feature,numeric,current month available at prediction time,0.0592,False,ok,True
+trend_slope_6m,existing preprocessed feature,numeric,current month available at prediction time,0.1185,False,ok,True
+unique_customers,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+units_lag_1m,existing preprocessed feature,numeric,current vs prior / prior-only history,0.0197,False,ok,True
+units_lag_3m,existing preprocessed feature,numeric,current vs prior / prior-only history,0.0592,False,ok,True
+units_sold,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+weighted_pipeline_eur,existing preprocessed feature,numeric,current month available at prediction time,0.0,False,ok,True
+commercial_pressure_score,interaction & risk,numeric,current month available at prediction time,0.0,True,ok,True
+engagement_to_pipeline_ratio,interaction & risk,numeric,current month available at prediction time,0.1542,True,ok,True
+marketing_efficiency_score,interaction & risk,numeric,current month available at prediction time,0.8167,True,ok,True
+pipeline_value_per_customer,interaction & risk,numeric,current month available at prediction time,0.4056,True,ok,True
+revenue_at_risk_proxy,interaction & risk,numeric,current month available at prediction time,0.0,True,ok,True
+actual_margin_gap_vs_target,lifecycle & profitability,numeric,current month available at prediction time,0.4056,True,ok,True
+actual_unit_cost_eur,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+actual_vs_estimated_margin_gap,lifecycle & profitability,numeric,current month available at prediction time,0.4056,True,ok,True
+base_unit_cost_eur,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+cost_per_lead_eur,lifecycle & profitability,numeric,current month available at prediction time,0.0633,False,ok,True
+cost_variance_eur,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+cost_variance_pct,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+cost_variance_to_revenue,lifecycle & profitability,numeric,current month available at prediction time,0.4056,True,ok,True
+dominant_margin_category,lifecycle & profitability,categorical,current month available at prediction time,0.4056,False,ok,True
+estimated_gross_margin_pct,lifecycle & profitability,numeric,current month available at prediction time,0.4056,True,ok,True
+estimated_gross_profit,lifecycle & profitability,numeric,current month available at prediction time,0.0,True,ok,True
+gross_margin_pct,lifecycle & profitability,numeric,current month available at prediction time,0.4056,False,ok,True
+gross_profit_eur,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+gross_profit_growth_pct,lifecycle & profitability,numeric,current vs prior / prior-only history,0.4213,True,ok,True
+gross_profit_per_unit,lifecycle & profitability,numeric,current month available at prediction time,0.4056,True,ok,True
+lifecycle_stage,lifecycle & profitability,categorical,static/current dimension,0.0,False,ok,True
+lifecycle_stage_num,lifecycle & profitability,numeric,current month available at prediction time,0.0,True,ok,True
+margin_factor,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+margin_gap_vs_target,lifecycle & profitability,numeric,current month available at prediction time,0.4056,True,ok,True
+product_age_months,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+standard_unit_cost_eur,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+target_margin_pct,lifecycle & profitability,numeric,current month available at prediction time,0.0,False,ok,True
+competitor_pressure_change_pct,market context,numeric,current vs prior / prior-only history,0.802,True,ok,True
+competitor_pressure_index,market context,numeric,current month available at prediction time,0.7998,False,ok,True
+demand_competition_ratio,market context,numeric,current month available at prediction time,0.7998,True,ok,True
+macro_business_index,market context,numeric,current month available at prediction time,0.7998,False,ok,True
+macro_business_index_pct,market context,numeric,current month available at prediction time,0.802,True,ok,True
+market_demand_change_pct,market context,numeric,current vs prior / prior-only history,0.802,True,ok,True
+market_demand_index,market context,numeric,current month available at prediction time,0.7998,False,ok,True
+market_growth_factor,market context,numeric,current month available at prediction time,0.0,False,ok,True
+market_growth_pct,market context,numeric,current vs prior / prior-only history,0.7998,False,ok,True
+market_opportunity_change_pct,market context,numeric,current vs prior / prior-only history,0.802,True,ok,True
+market_opportunity_score,market context,numeric,current month available at prediction time,0.7998,False,ok,True
+market_pipeline_interest_index,market context,numeric,current month available at prediction time,0.7998,False,ok,True
+market_tailwind_score,market context,numeric,current month available at prediction time,0.0,True,ok,True
+regional_market_growth_factor,market context,numeric,current month available at prediction time,0.7998,False,ok,True
+seasonality_adjusted_units,market context,numeric,current month available at prediction time,0.7998,True,ok,True
+seasonality_index,market context,numeric,current month available at prediction time,0.7998,False,ok,True
+weak_market_flag,market context,binary,current month available at prediction time,0.7998,True,ok,True
+campaign_active_with_no_sales,marketing & digital,binary,current month available at prediction time,0.0,True,ok,True
+campaign_channel,marketing & digital,categorical,current month available at prediction time,0.0,False,ok,True
+campaign_clicks,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+campaign_ctr_pct,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+campaign_flag,marketing & digital,binary,current month available at prediction time,0.0,False,ok,True
+campaign_impressions,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+campaign_spend_eur,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+campaign_spend_lag_1m,marketing & digital,numeric,current vs prior / prior-only history,0.0197,True,ok,True
+campaign_spend_per_demo,marketing & digital,numeric,current month available at prediction time,0.0994,True,ok,True
+campaign_spend_per_visit,marketing & digital,numeric,current month available at prediction time,0.0,True,ok,True
+campaign_spend_rolling_3m,marketing & digital,numeric,current vs prior / prior-only history,0.0197,True,ok,True
+click_to_mql_rate,marketing & digital,numeric,current month available at prediction time,0.8167,True,ok,True
+crm_demo_like_count,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+demo_conversion_rate,marketing & digital,numeric,current month available at prediction time,0.0,True,ok,True
+demo_requests,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+demo_requests_growth_pct,marketing & digital,numeric,current vs prior / prior-only history,0.1176,True,ok,True
+digital_interest_per_unit,marketing & digital,numeric,current month available at prediction time,0.4056,True,ok,True
+mql_conversion_rate,marketing & digital,numeric,current month available at prediction time,0.0,True,ok,True
+page_view_to_visit_ratio,marketing & digital,numeric,current month available at prediction time,0.0,True,ok,True
+product_page_views,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+website_visits,marketing & digital,numeric,current month available at prediction time,0.0,False,ok,True
+website_visits_growth_pct,marketing & digital,numeric,current vs prior / prior-only history,0.0197,True,ok,True
+customer_count_growth_pct,momentum & stability,numeric,current vs prior / prior-only history,0.4213,False,ok,True
+is_growth_stage,momentum & stability,binary,current month available at prediction time,0.0,True,ok,True
+mom_units_growth_pct,momentum & stability,numeric,current vs prior / prior-only history,0.4213,False,ok,True
+product_growth_factor,momentum & stability,numeric,current month available at prediction time,0.0,False,ok,True
+revenue_volatility_3m,momentum & stability,numeric,current month available at prediction time,0.1776,True,ok,True
+revenue_vs_lag_1m_pct,momentum & stability,numeric,current vs prior / prior-only history,0.4213,True,ok,True
+risk_factor_volatility,momentum & stability,binary,current month available at prediction time,0.0,False,ok,True
+rolling_revenue_mean_3m,momentum & stability,numeric,current vs prior / prior-only history,0.0395,True,ok,True
+rolling_revenue_std_3m,momentum & stability,numeric,current vs prior / prior-only history,0.0395,True,ok,True
+rolling_units_cv_6m,momentum & stability,numeric,current vs prior / prior-only history,0.1132,True,ok,True
+rolling_units_mean_3m,momentum & stability,numeric,current vs prior / prior-only history,0.0395,False,ok,True
+rolling_units_mean_6m,momentum & stability,numeric,current vs prior / prior-only history,0.0592,False,ok,True
+rolling_units_std_3m,momentum & stability,numeric,current vs prior / prior-only history,0.0395,False,ok,True
+units_acceleration_3m,momentum & stability,numeric,current month available at prediction time,0.079,True,ok,True
+units_vs_6m_avg_pct,momentum & stability,numeric,current month available at prediction time,0.1132,True,ok,True
+volatility_3m,momentum & stability,numeric,current month available at prediction time,0.1776,False,ok,True
+weighted_pipeline_growth_pct,momentum & stability,numeric,current vs prior / prior-only history,0.1887,True,ok,True
+category_region_avg_discount,peer benchmark,numeric,current month available at prediction time,0.0114,True,ok,True
+category_region_customers,peer benchmark,numeric,current month available at prediction time,0.0,True,ok,True
+category_region_product_count,peer benchmark,numeric,current month available at prediction time,0.0,True,ok,True
+category_region_revenue,peer benchmark,numeric,current month available at prediction time,0.0,True,ok,True
+category_region_units_2,peer benchmark,numeric,current month available at prediction time,0.0,True,ok,True
+churn_risk_customer_share,peer benchmark,numeric,current month available at prediction time,0.4056,True,ok,True
+churn_risk_customer_share_lag_1m,peer benchmark,numeric,current vs prior / prior-only history,0.4213,True,ok,True
+customer_share_category_region,peer benchmark,numeric,current month available at prediction time,0.0112,True,ok,True
+discount_vs_category_region,peer benchmark,numeric,current month available at prediction time,0.4078,True,ok,True
+product_revenue_share_category_region,peer benchmark,numeric,current month available at prediction time,0.0112,True,ok,True
+product_unit_share_category_region,peer benchmark,numeric,current month available at prediction time,0.0112,True,ok,True
+revenue_percentile_category_region,peer benchmark,numeric,current month available at prediction time,0.0,True,ok,True
+unit_rank_category_region,peer benchmark,numeric,current month available at prediction time,0.0,True,ok,True
+unit_share_change_pct,peer benchmark,numeric,current vs prior / prior-only history,0.4228,True,ok,True
+unit_share_lag_1m,peer benchmark,numeric,current vs prior / prior-only history,0.0309,True,ok,True
+backorder_rate,supply & returns,binary,current month available at prediction time,0.4056,True,ok,True
+backorder_units,supply & returns,binary,current month available at prediction time,0.0,False,ok,True
+demand_supply_gap,supply & returns,numeric,current month available at prediction time,0.7998,True,ok,True
+demand_supply_mismatch_flag,supply & returns,binary,current month available at prediction time,0.7998,True,ok,True
+ending_stock_to_sales_ratio,supply & returns,numeric,current month available at prediction time,0.4056,True,ok,True
+ending_stock_units,supply & returns,numeric,current month available at prediction time,0.4056,False,ok,True
+inventory_months_cover,supply & returns,numeric,current month available at prediction time,0.4686,True,ok,True
+inventory_turnover_proxy,supply & returns,numeric,current month available at prediction time,0.4069,True,ok,True
+inventory_value_eur,supply & returns,numeric,current month available at prediction time,0.4056,False,ok,True
+opening_stock_units,supply & returns,numeric,current month available at prediction time,0.4056,False,ok,True
+production_to_sales_ratio,supply & returns,numeric,current month available at prediction time,0.4056,True,ok,True
+production_units,supply & returns,numeric,current month available at prediction time,0.4056,False,ok,True
+return_count,supply & returns,numeric,current month available at prediction time,0.0,False,ok,True
+return_pressure_score,supply & returns,numeric,current month available at prediction time,0.0,True,ok,True
+return_rate_change_pct,supply & returns,numeric,current vs prior / prior-only history,0.9774,True,ok,True
+return_rate_units,supply & returns,numeric,current month available at prediction time,0.4056,False,ok,True
+return_units,supply & returns,numeric,current month available at prediction time,0.0,False,ok,True
+return_value_eur,supply & returns,numeric,current month available at prediction time,0.0,False,ok,True
+return_value_rate,supply & returns,numeric,current month available at prediction time,0.4056,True,ok,True
+stock_change_units,supply & returns,numeric,current month available at prediction time,0.4056,True,ok,True
+stockout_flag,supply & returns,binary,current month available at prediction time,0.0,False,ok,True
+stockout_with_demand_flag,supply & returns,binary,current month available at prediction time,0.0,True,ok,True
+supply_coverage_ratio,supply & returns,numeric,current month available at prediction time,0.4056,False,ok,True
+supply_pressure_change_pct,supply & returns,numeric,current vs prior / prior-only history,0.802,True,ok,True
+supply_pressure_index,supply & returns,numeric,current month available at prediction time,0.7998,False,ok,True
+supply_pressure_score,supply & returns,numeric,current month available at prediction time,0.0,True,ok,True
+zero_stock_flag,supply & returns,binary,current month available at prediction time,0.0,False,ok,True

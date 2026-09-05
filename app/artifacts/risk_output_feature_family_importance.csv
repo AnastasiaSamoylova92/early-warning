@@ -1,0 +1,11 @@
+feature_family,total_importance,feature_count,top_feature
+Risk and trend,0.4592913518174812,35,customers_lag_1m
+Profitability,0.18222097826816058,34,revenue
+Other,0.12166902731431084,30,units_sold
+Customer,0.08123124959976954,17,customer_share_category_region
+Sales organization,0.052101065338023896,12,covered_annual_quota_eur
+Market and competition,0.0376109211119666,17,product_unit_share_category_region
+Supply and returns,0.02943098816289869,23,inventory_months_cover
+Marketing and digital,0.022982595180267597,25,crm_demo_like_count
+Product and lifecycle,0.011521162537088412,27,product_age_months
+Region and macro,0.0019406606700236,8,macro_business_index

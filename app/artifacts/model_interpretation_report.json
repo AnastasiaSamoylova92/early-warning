@@ -1,0 +1,261 @@
+{
+  "model": "scikit-learn RandomForestClassifier",
+  "selected_candidate": "balanced_medium",
+  "selected_high_risk_threshold": 0.39,
+  "dashboard_rows": 101280,
+  "current_scoring_rows": 2000,
+  "current_alert_rows": 1015,
+  "latest_month": "2025-12-01",
+  "chart_path": "..\\data\\full_data\\ml_interpretation_risk_output\\false_alarm_recall_tradeoff.png",
+  "test_metrics": [
+    {
+      "split": "test",
+      "evaluation_role": "out_of_time",
+      "accuracy": 0.699,
+      "balanced_accuracy": 0.7359690726506463,
+      "macro_f1": 0.6394393254722033,
+      "weighted_f1": 0.7118282280552684,
+      "high_risk_recall": 0.8126094570928196,
+      "high_risk_precision": 0.4308263695450325,
+      "high_risk_f2": 0.6902707527521571,
+      "false_alarm_rate": 0.03155077461526584,
+      "alert_rate": 0.05385,
+      "any_risk_alert_rate": 0.4465,
+      "tp": 464,
+      "fp": 613,
+      "fn": 107,
+      "tn": 18816
+    }
+  ],
+  "high_risk_confidence_intervals": [
+    {
+      "split": "validation",
+      "metric": "high_risk_precision",
+      "estimate": 0.4490238611713666,
+      "successes": 414,
+      "trials": 922,
+      "lower_95_pct": 0.4171949497693241,
+      "upper_95_pct": 0.4812758037591412
+    },
+    {
+      "split": "validation",
+      "metric": "high_risk_recall",
+      "estimate": 0.9019607843137256,
+      "successes": 414,
+      "trials": 459,
+      "lower_95_pct": 0.8713283048577448,
+      "upper_95_pct": 0.925920689182549
+    },
+    {
+      "split": "test",
+      "metric": "high_risk_precision",
+      "estimate": 0.4308263695450325,
+      "successes": 464,
+      "trials": 1077,
+      "lower_95_pct": 0.4015490174496006,
+      "upper_95_pct": 0.460595444791675
+    },
+    {
+      "split": "test",
+      "metric": "high_risk_recall",
+      "estimate": 0.8126094570928196,
+      "successes": 464,
+      "trials": 571,
+      "lower_95_pct": 0.7785515441859109,
+      "upper_95_pct": 0.8424891042292352
+    }
+  ],
+  "top_15_features": [
+    {
+      "rank": 1,
+      "feature": "customers_lag_1m",
+      "importance": 0.0382828554529179,
+      "cumulative_importance": 0.0382828554529179,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 2,
+      "feature": "trend_slope_3m",
+      "importance": 0.0333357882624267,
+      "cumulative_importance": 0.0716186437153447,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 3,
+      "feature": "unit_share_lag_1m",
+      "importance": 0.0329517073229472,
+      "cumulative_importance": 0.1045703510382919,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 4,
+      "feature": "units_lag_1m",
+      "importance": 0.0322031453397659,
+      "cumulative_importance": 0.1367734963780578,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 5,
+      "feature": "revenue_lag_1m",
+      "importance": 0.0321151153927511,
+      "cumulative_importance": 0.168888611770809,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 6,
+      "feature": "customer_share_category_region",
+      "importance": 0.0314670885725968,
+      "cumulative_importance": 0.2003557003434058,
+      "feature_family": "Customer"
+    },
+    {
+      "rank": 7,
+      "feature": "volatility_3m",
+      "importance": 0.0299411428420804,
+      "cumulative_importance": 0.2302968431854863,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 8,
+      "feature": "revenue_volatility_3m",
+      "importance": 0.0287380994379587,
+      "cumulative_importance": 0.259034942623445,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 9,
+      "feature": "revenue",
+      "importance": 0.0252391382196552,
+      "cumulative_importance": 0.2842740808431003,
+      "feature_family": "Profitability"
+    },
+    {
+      "rank": 10,
+      "feature": "units_sold",
+      "importance": 0.0245497406422254,
+      "cumulative_importance": 0.3088238214853258,
+      "feature_family": "Other"
+    },
+    {
+      "rank": 11,
+      "feature": "rolling_revenue_mean_3m",
+      "importance": 0.0243717706361709,
+      "cumulative_importance": 0.3331955921214967,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 12,
+      "feature": "units_lag_3m",
+      "importance": 0.0243455037851431,
+      "cumulative_importance": 0.3575410959066398,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 13,
+      "feature": "rolling_units_std_3m",
+      "importance": 0.024134497787758,
+      "cumulative_importance": 0.3816755936943979,
+      "feature_family": "Risk and trend"
+    },
+    {
+      "rank": 14,
+      "feature": "revenue_at_risk_proxy",
+      "importance": 0.0234775267597411,
+      "cumulative_importance": 0.405153120454139,
+      "feature_family": "Profitability"
+    },
+    {
+      "rank": 15,
+      "feature": "mom_units_growth_pct",
+      "importance": 0.0224508128763879,
+      "cumulative_importance": 0.4276039333305269,
+      "feature_family": "Other"
+    }
+  ],
+  "feature_family_importance": [
+    {
+      "feature_family": "Risk and trend",
+      "total_importance": 0.4592913518174812,
+      "feature_count": 35,
+      "top_feature": "customers_lag_1m"
+    },
+    {
+      "feature_family": "Profitability",
+      "total_importance": 0.18222097826816058,
+      "feature_count": 34,
+      "top_feature": "revenue"
+    },
+    {
+      "feature_family": "Other",
+      "total_importance": 0.12166902731431084,
+      "feature_count": 30,
+      "top_feature": "units_sold"
+    },
+    {
+      "feature_family": "Customer",
+      "total_importance": 0.08123124959976954,
+      "feature_count": 17,
+      "top_feature": "customer_share_category_region"
+    },
+    {
+      "feature_family": "Sales organization",
+      "total_importance": 0.052101065338023896,
+      "feature_count": 12,
+      "top_feature": "covered_annual_quota_eur"
+    },
+    {
+      "feature_family": "Market and competition",
+      "total_importance": 0.0376109211119666,
+      "feature_count": 17,
+      "top_feature": "product_unit_share_category_region"
+    },
+    {
+      "feature_family": "Supply and returns",
+      "total_importance": 0.02943098816289869,
+      "feature_count": 23,
+      "top_feature": "inventory_months_cover"
+    },
+    {
+      "feature_family": "Marketing and digital",
+      "total_importance": 0.022982595180267597,
+      "feature_count": 25,
+      "top_feature": "crm_demo_like_count"
+    },
+    {
+      "feature_family": "Product and lifecycle",
+      "total_importance": 0.011521162537088412,
+      "feature_count": 27,
+      "top_feature": "product_age_months"
+    },
+    {
+      "feature_family": "Region and macro",
+      "total_importance": 0.0019406606700236,
+      "feature_count": 8,
+      "top_feature": "macro_business_index"
+    }
+  ],
+  "local_explanation_method": "Additive Random Forest tree-path probability contributions for each row's predicted class; not SHAP.",
+  "maximum_local_explanation_reconstruction_error": 1.1102230246251565e-15,
+  "quality_checks": {
+    "model_feature_contract_matches": true,
+    "feature_matrices_are_complete": "True",
+    "identifier_contract_matches": "True",
+    "identifier_keys_are_unique": "True",
+    "upstream_predictions_reproduced": true,
+    "selected_threshold_matches_model_config": "True",
+    "dashboard_contains_all_pipeline_rows": true,
+    "dashboard_key_is_unique": true,
+    "human_context_join_coverage_is_complete": "True",
+    "probabilities_sum_to_one": true,
+    "risk_score_is_in_legacy_range": "True",
+    "risk_score_0_10_is_in_range": "True",
+    "scoring_actual_labels_are_missing": "True",
+    "scoring_false_alarm_flags_are_missing": "True",
+    "local_explanations_reconstruct_probability": "True",
+    "all_scoring_rows_have_local_drivers": "True",
+    "global_importance_sums_to_one": "True",
+    "legacy_prediction_columns_preserved": true,
+    "legacy_metric_columns_preserved": true,
+    "original_output_files_preserved": true
+  }
+}

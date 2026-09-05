@@ -1,0 +1,207 @@
+{
+  "artifact_inventory": [
+    {
+      "artifact": "train_ml",
+      "filename": "train_feature_engineered_ml_ready.csv",
+      "size_bytes": 234980952
+    },
+    {
+      "artifact": "valid_ml",
+      "filename": "valid_feature_engineered_ml_ready.csv",
+      "size_bytes": 59046911
+    },
+    {
+      "artifact": "test_ml",
+      "filename": "test_feature_engineered_ml_ready.csv",
+      "size_bytes": 73796903
+    },
+    {
+      "artifact": "scoring_ml",
+      "filename": "scoring_feature_engineered_ml_ready.csv",
+      "size_bytes": 7359891
+    },
+    {
+      "artifact": "train_ids",
+      "filename": "train_feature_engineered_ids.csv",
+      "size_bytes": 2379403
+    },
+    {
+      "artifact": "valid_ids",
+      "filename": "valid_feature_engineered_ids.csv",
+      "size_bytes": 601675
+    },
+    {
+      "artifact": "test_ids",
+      "filename": "test_feature_engineered_ids.csv",
+      "size_bytes": 752075
+    },
+    {
+      "artifact": "scoring_ids",
+      "filename": "scoring_feature_engineered_ids.csv",
+      "size_bytes": 71253
+    },
+    {
+      "artifact": "human_features",
+      "filename": "feature_engineered_modeling_dataset.csv",
+      "size_bytes": 146909414
+    },
+    {
+      "artifact": "train_model",
+      "filename": "selected_random_forest_train_model.joblib",
+      "size_bytes": 68135542
+    },
+    {
+      "artifact": "refit_model",
+      "filename": "selected_random_forest_refit_model.joblib",
+      "size_bytes": 89383878
+    },
+    {
+      "artifact": "configuration",
+      "filename": "random_forest_model_config.json",
+      "size_bytes": 664
+    },
+    {
+      "artifact": "threshold_tradeoff",
+      "filename": "high_risk_threshold_tuning_valid.csv",
+      "size_bytes": 54822
+    },
+    {
+      "artifact": "global_importance",
+      "filename": "random_forest_feature_importance.csv",
+      "size_bytes": 15501
+    },
+    {
+      "artifact": "permutation_importance",
+      "filename": "random_forest_permutation_importance_valid.csv",
+      "size_bytes": 1342
+    },
+    {
+      "artifact": "stronger_model_results",
+      "filename": "stronger_model_results.csv",
+      "size_bytes": 1555
+    },
+    {
+      "artifact": "saved_test_predictions",
+      "filename": "test_prediction_probabilities.csv",
+      "size_bytes": 2911853
+    },
+    {
+      "artifact": "saved_scoring_predictions",
+      "filename": "random_forest_scoring_predictions.csv",
+      "size_bytes": 299195
+    },
+    {
+      "artifact": "confidence_intervals",
+      "filename": "random_forest_high_risk_confidence_intervals.csv",
+      "size_bytes": 437
+    }
+  ],
+  "feature_contract": {
+    "validation_matches_train": true,
+    "test_matches_train": true,
+    "scoring_matches_train": true,
+    "train_model_matches_input": true,
+    "refit_model_matches_input": true,
+    "configured_feature_count_matches": true
+  },
+  "feature_quality": [
+    {
+      "split": "train",
+      "missing_values": 0,
+      "infinite_values": 0,
+      "duplicate_columns": 0
+    },
+    {
+      "split": "validation",
+      "missing_values": 0,
+      "infinite_values": 0,
+      "duplicate_columns": 0
+    },
+    {
+      "split": "test",
+      "missing_values": 0,
+      "infinite_values": 0,
+      "duplicate_columns": 0
+    },
+    {
+      "split": "scoring",
+      "missing_values": 0,
+      "infinite_values": 0,
+      "duplicate_columns": 0
+    }
+  ],
+  "identifier_alignment": [
+    {
+      "split": "train",
+      "rows_match": true,
+      "target_values_match": true,
+      "duplicate_keys": 0,
+      "first_target_month": "2021-02-01 00:00:00",
+      "last_target_month": "2024-06-01 00:00:00"
+    },
+    {
+      "split": "valid",
+      "rows_match": true,
+      "target_values_match": true,
+      "duplicate_keys": 0,
+      "first_target_month": "2024-07-01 00:00:00",
+      "last_target_month": "2025-02-01 00:00:00"
+    },
+    {
+      "split": "test",
+      "rows_match": true,
+      "target_values_match": true,
+      "duplicate_keys": 0,
+      "first_target_month": "2025-03-01 00:00:00",
+      "last_target_month": "2025-12-01 00:00:00"
+    },
+    {
+      "split": "scoring",
+      "rows_match": true,
+      "target_values_match": true,
+      "duplicate_keys": 0,
+      "first_target_month": "2026-01-01 00:00:00",
+      "last_target_month": "2026-01-01 00:00:00"
+    }
+  ],
+  "upstream_prediction_checks": {
+    "test_row_count_matches": true,
+    "test_high_probability_matches": true,
+    "test_tuned_label_matches": true,
+    "scoring_row_count_matches": true,
+    "scoring_high_probability_matches": true,
+    "scoring_label_matches": true
+  },
+  "context_coverage": 1.0,
+  "local_explanation_check": [
+    {
+      "maximum_absolute_reconstruction_error": 1.1102230246251565e-15,
+      "mean_absolute_reconstruction_error": 1.4615536133638926e-16,
+      "rows_explained": 2000,
+      "features_considered": 228,
+      "trees_per_explanation": 220
+    }
+  ],
+  "final_checks": {
+    "model_feature_contract_matches": true,
+    "feature_matrices_are_complete": "True",
+    "identifier_contract_matches": "True",
+    "identifier_keys_are_unique": "True",
+    "upstream_predictions_reproduced": true,
+    "selected_threshold_matches_model_config": "True",
+    "dashboard_contains_all_pipeline_rows": true,
+    "dashboard_key_is_unique": true,
+    "human_context_join_coverage_is_complete": "True",
+    "probabilities_sum_to_one": true,
+    "risk_score_is_in_legacy_range": "True",
+    "risk_score_0_10_is_in_range": "True",
+    "scoring_actual_labels_are_missing": "True",
+    "scoring_false_alarm_flags_are_missing": "True",
+    "local_explanations_reconstruct_probability": "True",
+    "all_scoring_rows_have_local_drivers": "True",
+    "global_importance_sums_to_one": "True",
+    "legacy_prediction_columns_preserved": true,
+    "legacy_metric_columns_preserved": true,
+    "original_output_files_preserved": true
+  }
+}

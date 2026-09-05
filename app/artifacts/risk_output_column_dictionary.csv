@@ -1,0 +1,13 @@
+column,definition,range
+risk_score,Legacy score: high-risk probability multiplied by 100.,0–100
+risk_score_0_10,Expected severity using 0×P(low) + 5×P(medium) + 10×P(high).,0–10
+high_risk_probability,Random Forest probability for class 2 (High Risk).,0–1
+predicted_risk_label,Risk label after applying the validated high-risk threshold.,Low / Medium / High
+is_high_risk_alert,1 when the thresholded prediction is High Risk.,0 / 1
+is_false_alarm,1 when a labeled non-high row was predicted High Risk; missing for scoring.,0 / 1 / missing
+is_missed_high_risk,1 when a labeled High Risk row was not predicted High Risk; missing for scoring.,0 / 1 / missing
+model_driver_1,Feature with the largest absolute local tree-path contribution for a scoring row.,Text
+model_explained_class,Predicted class whose probability is decomposed by the local model-driver fields.,Low / Medium / High
+business_risk_indicators,Up to five deterministic business conditions observed in human-readable features.,Text
+recommended_action,Rule-based operational suggestion derived from risk label and business indicators.,Text
+monitoring_priority,"Sort order: High Risk=1, Medium Risk=2, Low Risk=3.",1–3
