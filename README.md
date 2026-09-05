@@ -153,28 +153,14 @@ The selected model uses:
 ### Threshold tuning
 The default multiclass decision rule is supplemented with a dedicated high-risk cutoff. Threshold candidates are evaluated on validation data only. Among thresholds achieving at least 70% high-risk recall, selection prioritizes high-risk F2 then precision and macro F1, while favoring fewer false alarms.
 
-The final threshold is **0.43**.
+The final threshold is **0.39**.
 
 ## Out-of-time test results
 The final operating point was evaluated once on the untouched test period.
 
 | Metric | Result |
 |---|---:|
-| Accuracy | 70,9% |
-| Balanced accuracy | 78,09% |
-| Macro F1 | 65,79% |
-| High-risk precision | 42,47% |
-| High-risk recall | 90,66% |
-| High-risk F1 | 57,84% |
-| High-risk F2 | 73,89% |
-| High-risk alert rate | 8,23% |
-| False-alarm rate | 4,92% |
-| High-risk PR-AUC | 55,80% |
-
-For the 20.000-row test period, the model generated 1.646 high-risk alerts, correctly identified 699 of 771 actual high-risk observations and missed 72. The 95% Wilson intervals were:
-
-- high-risk recall: **88,40%–92,52%**
-- high-risk precision: **40,10%–44,87%**
+**PLACEHOLDER**
 
 The model intentionally prioritizes recall because missing a genuine risk is assumed to be more costly than reviewing an additional alert. Precision, alert volume and false-alarm rate remain visible so this decision can be adapted to operational capacity.
 
@@ -208,9 +194,7 @@ For the current December 2025 scoring month, the model produces predictions for 
 
 | Predicted class | Rows |
 |---|---:|
-| Low Risk | 929 |
-| Medium Risk | 948 |
-| High Risk | 123 |
+**PLACEHOLDER**
 | **Total** | **2.000** |
 
 The combined operational alert queue contains 1.071 Medium- and High-Risk product–region combinations.
